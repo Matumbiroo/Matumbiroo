@@ -1,0 +1,78 @@
+.wrapper {
+    height: 100vh;
+}
+.buttons {
+    text-align: right;
+}
+
+.btn-login {
+    width: 205px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    line-height: 1em;
+    display: inline-block;
+    text-transform: uppercase;
+    color: white;
+    font-family: Gotham SSm,sans-serif;
+    text-align: center;
+}
+
+.btn-signup {
+    border: none;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    line-height: 1em;
+    text-transform: uppercase;
+    display: inline-block;
+    height: 50px;
+    width: 200px;
+    font-family: Gotham SSm,sans-serif;
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+
+.header {
+    color: white;
+    margin-top: 20px;
+}
+
+.welcome {
+    position: relative;
+    color: white;
+    top: 35%;
+    -webkit-transform: translateY(-75%);
+    -ms-transform: translateY(-75%);
+    transform: translateY(-75%);
+}
+
+.signup-form {
+    text-align: right;
+}
+
+input {
+    background-color: transparent;
+    display: inline-block;
+    border: none;
+    color: white;
+    border-bottom: white solid 1px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.button-conf-signup {
+    height: 30px;
+    width: 200px;
+    background-color: white;
+    color: black;
+    border: none;
+    text-transform: uppercase;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+}
