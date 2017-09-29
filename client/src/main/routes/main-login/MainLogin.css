@@ -1,8 +1,11 @@
 .wrapper {
     height: 100vh;
 }
+
 .buttons {
+    margin-top: 50px;
     text-align: right;
+    margin-right: 15px;
 }
 
 .btn-login {
@@ -19,6 +22,8 @@
     color: white;
     font-family: Gotham SSm,sans-serif;
     text-align: center;
+    outline-color: #0c94d1;
+    outline-width: 1.5px;
 }
 
 .btn-signup {
@@ -35,37 +40,67 @@
     text-align: center;
     background-color: white;
     color: black;
+    outline-color: #0c94d1;
+    outline-width: 1.5px;
 }
 
 .header {
     color: white;
     margin-top: 20px;
+    margin-left: 13px;
 }
 
 .welcome {
     position: relative;
     color: white;
-    top: 35%;
+    top: 15%;
     -webkit-transform: translateY(-75%);
     -ms-transform: translateY(-75%);
     transform: translateY(-75%);
+    z-index: -1;
+}
+
+.welcome h1 {
+    display: inline-block;
+    border-bottom: #0b95d4 5px solid;
+}
+
+.welcome p {
+    color: lightgrey;
 }
 
 .signup-form {
+    margin-left: 71.05%;
     text-align: right;
+    height: 100px;
+    width: 330px;
 }
+
+/* .hide {
+    transitions here
+} */
+
+/* .show-form {
+    transitions here
+} */
 
 input {
     background-color: transparent;
+    margin-bottom: 15px;
+    width: 100%;
     display: inline-block;
     border: none;
     color: white;
-    border-bottom: white solid 1px;
-    font-size: 11px;
-    font-weight: 500;
+    border-bottom: white solid 0.5px;
+    font-size: 18px;
+    font-weight: 200;
+    outline: none;
+    box-sizing: border-box;
+    padding-left: 12px;
 }
 
 .button-conf-signup {
+    margin-top: 10px;
     height: 30px;
     width: 200px;
     background-color: white;
@@ -75,4 +110,22 @@ input {
     font-size: 9px;
     font-weight: 500;
     letter-spacing: 2.5px;
+    outline-color: #0c94d1;
+    outline-width: 1.5px;
+    width: 100%;
+}
+
+.button-hideform {
+    text-align: center;
+    background-color: transparent;
+    margin-bottom: 75px;
+    height: 30px;
+    width: 50px;
+    background-color: transparent;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    line-height: 1em;
+    border: none;
+    outline: none;
 }

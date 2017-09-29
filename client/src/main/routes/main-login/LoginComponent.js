@@ -8,24 +8,24 @@ class LoginComponent extends React.Component {
         <div className="wrapper container">
             <div className="row">
                 <div>
-                    <h1 className="header">Matumbiroo</h1>
+                    {/* <h1 className="header">Matumbiroo</h1> */}
                 </div>
                 <div className="buttons">
                     <button className="btn-login">log in</button>
-                    <button className="btn-signup">sign up</button>
+                    <button onClick={this.props.showForm}className="btn-signup">sign up</button>
                 </div>
-                
             </div>
             <div className="welcome">
                 <h1>Welcome to Matumbiroo.</h1>
-                <p>ba;sldkg;alskhdg;laskhdgasdklh;</p>
-                <p>teohtweo;ihewhoi;ewih;tewhi;</p>
+                <p>-asdgljsda;glsa;gd;lgad;klg;lsjdkgs;</p>
+                <p>Sadgsiojijgdsag;ds</p>
+                <p>ffas;dgasdg;oihasdgoa</p>
             </div>
-            <form className="signup-form">
-                <button className="button-hideform"></button>
+            <form className={this.props.className}>
+                <button onClick={this.props.hideForm} className="button-hideform">Hide</button>
                 <input placeholder="Username" type="text"/>
-                <input placeholder="Password" type="text"/>
-                <input placeholder="Email" type="text"/>
+                <input placeholder="Password" type="password"/>
+                <input placeholder="Email" type="email"/>
                 <button className="button-conf-signup">Sign up</button>
             </form>
         </div>
