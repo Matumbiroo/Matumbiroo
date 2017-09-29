@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 class LoginComponent extends React.Component {
     render() {
@@ -9,7 +10,9 @@ class LoginComponent extends React.Component {
                     {/* <h1 className="header">Matumbiroo</h1> */}
                 </div>
                 <div className="buttons">
-                    <button className="btn-login">log in</button>
+                    <Link to="/giphy">
+                        <button className="btn-login">log in</button>
+                    </Link>
                     <button onClick={this.props.showForm}className="btn-signup">sign up</button>
                 </div>
             </div>
