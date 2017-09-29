@@ -1,6 +1,6 @@
 body {
     background-color: #141414;
-    color: #b8b4bf;
+    color: #B8B4Bf;
 }
 
 /*----------------------------------Login Component----------------------------------*/
@@ -29,8 +29,9 @@ body {
     color: white;
     font-family: Gotham SSm,sans-serif;
     text-align: center;
-    outline-color: #0c94d1;
+    outline-color: #0C94D1;
     outline-width: 1.5px;
+    z-index: 5;
 }
 
 .btn-signup {
@@ -45,10 +46,12 @@ body {
     width: 200px;
     font-family: Gotham SSm,sans-serif;
     text-align: center;
-    background-color: white;
+    background-color: #0B95D4;
+    /* color: #0b95d4; */
     color: black;
-    outline-color: #0c94d1;
+    outline-color: #0C94D1;
     outline-width: 1.5px;
+    z-index: 5;
 }
 
 .header {
@@ -64,16 +67,37 @@ body {
     -webkit-transform: translateY(-75%);
     -ms-transform: translateY(-75%);
     transform: translateY(-75%);
-    z-index: -1;
+}
+
+::selection {
+    background: #FFFF4F;
 }
 
 .welcome h1 {
     display: inline-block;
-    border-bottom: #0b95d4 5px solid;
+    border-bottom: #0B95D4 5px solid;
+}
+
+.welcome h4 {
+    padding-left: 25px;
+    padding-bottom: 10px;
 }
 
 .welcome p {
     color: lightgrey;
+}
+
+.blue-period {
+    color: #0B95D4;
+}
+
+.matum-blue:hover {
+    cursor: default;
+    color: #0B95D4;
+}
+
+.matum-underline {
+    text-decoration: underline;
 }
 
 .signup-form {
@@ -106,6 +130,10 @@ input {
     padding-left: 12px;
 }
 
+input:hover::placeholder {
+    color: #0B95D4;
+}
+
 .button-conf-signup {
     margin-top: 10px;
     height: 30px;
@@ -117,7 +145,7 @@ input {
     font-size: 9px;
     font-weight: 500;
     letter-spacing: 2.5px;
-    outline-color: #0c94d1;
+    outline-color: #0C94D1;
     outline-width: 1.5px;
     width: 100%;
 }
