@@ -66,7 +66,6 @@ router.get('/callback', (req, res) => {
             spotifyApi.getMe().then(({ body }) => {
                 console.log(body);
             });
-
             // we can also pass the token to the browser to make requests from there
             res.redirect(`http://localhost:3000/user/${access_token}/${refresh_token}`);
         }).catch(err => {
