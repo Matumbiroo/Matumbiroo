@@ -5,6 +5,7 @@ import Error from './routes/misc-containers/error';
 import HomeContainer from "./routes/home-view/HomeContainer";
 import LoginContainer from "./routes/main-login/LoginContainer";
 import GiphySearchContainer from "./routes/giphy-search-landing/GiphySearchContainer";
+import RecentFifContainer from "./routes/stat-display/recent-fifty/RecentFifContainer";
 
 class App extends React.Component {
     render() {
@@ -15,9 +16,13 @@ class App extends React.Component {
                     <Route exact path="/giphy" component={GiphySearchContainer}/>
                     <Route exact path="/user/:accessToken/:refreshToken" component={HomeContainer}/>
                     <Route exact path="/error/:errorMsg" component={Error}/>
+                    <Route exact path="/recent-fifty" component={RecentFifContainer}/>
+                    <Route exact path="/playlists" component={RecentFifContainer}/>
+                    <Route exact path="/songs" component={RecentFifContainer}/>
+                    <Route exact path="/side-bar" component={RecentFifContainer}/>
                 </Switch>
             </BrowserRouter>
-        );
+        )
     }
 }
 

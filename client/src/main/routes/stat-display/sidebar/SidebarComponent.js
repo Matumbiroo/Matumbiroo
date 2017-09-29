@@ -1,13 +1,13 @@
 import React from 'react';
 
-class StatDisplayComponent extends React.Component {
+class SidebarComponent extends React.Component {
     render() {
     return (
         <div>
-
+        
         </div>
         )
     }
 }
 
-export default StatDisplayComponent;
+export default SidebarComponent;
