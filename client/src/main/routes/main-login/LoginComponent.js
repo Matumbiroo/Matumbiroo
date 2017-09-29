@@ -1,11 +1,9 @@
 import React from 'react';
 
-import './MainLogin.css';
-
 class LoginComponent extends React.Component {
     render() {
     return (
-        <div className="wrapper container">
+        <div className="main container">
             <div className="row">
                 <div>
                     {/* <h1 className="header">Matumbiroo</h1> */}

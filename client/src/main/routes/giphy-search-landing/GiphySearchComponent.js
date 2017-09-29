@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './giphy-search.css';
+
 
 class GiphySearchComponent extends Component {
     render() {

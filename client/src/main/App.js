@@ -11,7 +11,7 @@ class App extends React.Component {
         return (
             <BrowserRouter>
                 <Switch>
-                    <Route exact path="/" component={GiphySearchContainer}/>
+                    <Route exact path="/" component={LoginContainer}/>
                     <Route exact path="/user/:accessToken/:refreshToken" component={HomeContainer}/>
                     <Route exact path="/error/:errorMsg" component={Error}/>
                 </Switch>
