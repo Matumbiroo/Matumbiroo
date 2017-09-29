@@ -185,7 +185,7 @@ input:hover::placeholder {
     text-align: center;
 }
 
-/*!*--------------------------------------------HomeComponent*---------------------------------------------------*/
+/*----------------------------------HomeComponent----------------------------------*/
 
 .home-component-wrapper {
     display : grid;
@@ -224,3 +224,28 @@ input:hover::placeholder {
 .home-links {
 
 }
+
+/*----------------------------------RecentFifty----------------------------------*/
+
+.recent-fifty-wrapper {
+    display: grid;
+    grid-template-columns: 36em 1fr 6em;
+    grid-template-rows: 15em 1fr;
+    grid-gap: 10px;
+}
+
+.profile-averages {
+    grid-column: 2;
+    background-color: #0b95d4;
+}
+.scroll-view {
+    grid-column: 2;
+    grid-row: 2;
+    background-color: white;
+}
+.song-component {
+    height: 200px;
+    background-color: #0b95d4;
+    margin: 10px;
+}
+

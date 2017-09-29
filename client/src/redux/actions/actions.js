@@ -9,6 +9,8 @@ export const SPOTIFY_ME_BEGIN = 'SPOTIFY_ME_BEGIN';
 export const SPOTIFY_ME_SUCCESS = 'SPOTIFY_ME_SUCCESS';
 export const SPOTIFY_ME_FAILURE = 'SPOTIFY_ME_FAILURE';
 
+export const RECENT_FIFTY = 'RECENT_FIFTY';
+
 export function setTokens({accessToken, refreshToken}) {
     if (accessToken) {
         spotifyApi.setAccessToken(accessToken);
@@ -25,6 +27,21 @@ export function getMyInfo() {
             dispatch({ type: SPOTIFY_ME_FAILURE, error: e });
         });
     };
+}
+
+export function getRecentFifty(accessToken) {
+    return dispatch => {
+        return axios.get(`https://api.spotify.com/v1/me/player/recently-played/search`, {headers: {"Authorization": `Bearer ${accessToken}`}}).then((response)=> {
+
+        })
+    }
+}
+
+export function setRecentlyPlayed(recent) {
+    return {
+        type: "SET_RECENTLY_PLAYED",
+        recent
+    }
 }
 
 //-------------------------------------------------------------------------------------------------------
