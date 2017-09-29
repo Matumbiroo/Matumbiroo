@@ -1,6 +1,33 @@
+import Spotify from 'spotify-web-api-js';
 import axios from 'axios';
+const spotifyApi = new Spotify();
 
 const url = 'http://localhost:8000/users/';
+
+export const SPOTIFY_TOKENS = 'SPOTIFY_TOKENS';
+export const SPOTIFY_ME_BEGIN = 'SPOTIFY_ME_BEGIN';
+export const SPOTIFY_ME_SUCCESS = 'SPOTIFY_ME_SUCCESS';
+export const SPOTIFY_ME_FAILURE = 'SPOTIFY_ME_FAILURE';
+
+export function setTokens({accessToken, refreshToken}) {
+    if (accessToken) {
+        spotifyApi.setAccessToken(accessToken);
+    }
+    return { type: SPOTIFY_TOKENS, accessToken, refreshToken };
+}
+
+export function getMyInfo() {
+    return dispatch => {
+        dispatch({ type: SPOTIFY_ME_BEGIN});
+        spotifyApi.getMe().then(data => {
+            dispatch({ type: SPOTIFY_ME_SUCCESS, data: data });
+        }).catch(e => {
+            dispatch({ type: SPOTIFY_ME_FAILURE, error: e });
+        });
+    };
+}
+
+//-------------------------------------------------------------------------------------------------------
 
 export function loadData(){
     return (dispatch) => {
@@ -43,8 +70,7 @@ export function editData(editedUser, id) {
     }
 }
 
-export function postData(user){
-    console.log(user)
+export function postData(user, editedUser){
     return (dispatch) => {
         axios.post(url, editedUser).then((response) => {
             dispatch(loadData())
