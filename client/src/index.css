@@ -1,12 +1,19 @@
 body {
     background-color: #141414;
     color: #B8B4Bf;
+    /* font-family: 'Open Sans', sans-serif; */
+}
+
+::selection {
+    color: black;
+    background: #FFFF4F;
 }
 
 /*----------------------------------Login Component----------------------------------*/
 
 .main {
     height: 100vh;
+    overflow-x: hidden;
 }
 
 .buttons {
@@ -16,7 +23,7 @@ body {
 }
 
 .btn-login {
-    width: 205px;
+    width: 200px;
     height: 50px;
     background-color: transparent;
     border: none;
@@ -29,9 +36,13 @@ body {
     color: white;
     font-family: Gotham SSm,sans-serif;
     text-align: center;
-    outline-color: #0C94D1;
+    outline-color: white;
     outline-width: 1.5px;
     z-index: 5;
+}
+
+.btn-login:hover {
+    color: #0B95D4;
 }
 
 .btn-signup {
@@ -49,9 +60,12 @@ body {
     background-color: #0B95D4;
     /* color: #0b95d4; */
     color: black;
-    outline-color: #0C94D1;
-    outline-width: 1.5px;
+    outline: none;
     z-index: 5;
+}
+
+.btn-signup:hover {
+    color: white;
 }
 
 .header {
@@ -67,10 +81,6 @@ body {
     -webkit-transform: translateY(-75%);
     -ms-transform: translateY(-75%);
     transform: translateY(-75%);
-}
-
-::selection {
-    background: #FFFF4F;
 }
 
 .welcome h1 {
@@ -100,20 +110,20 @@ body {
     text-decoration: underline;
 }
 
-.signup-form {
+.default-form {
+    margin-left: 110%;
+    text-align: right;
+    height: 100px;
+    width: 330px;
+    transition: margin-left 0.25s ease-in-out;
+}
+
+.show-form {
     margin-left: 71.05%;
     text-align: right;
     height: 100px;
     width: 330px;
 }
-
-/* .hide {
-    transitions here
-} */
-
-/* .show-form {
-    transitions here
-} */
 
 input {
     background-color: transparent;
@@ -128,6 +138,7 @@ input {
     outline: none;
     box-sizing: border-box;
     padding-left: 12px;
+    padding-bottom: 5px;
 }
 
 input:hover::placeholder {
@@ -145,15 +156,20 @@ input:hover::placeholder {
     font-size: 9px;
     font-weight: 500;
     letter-spacing: 2.5px;
-    outline-color: #0C94D1;
+    outline-color: white;
     outline-width: 1.5px;
     width: 100%;
+}
+
+.button-conf-signup:hover {
+    background-color: #FFFF4F;
 }
 
 .button-hideform {
     text-align: center;
     background-color: transparent;
-    margin-bottom: 75px;
+    padding-left: 27px;
+    margin-bottom: 95px;
     height: 30px;
     width: 50px;
     background-color: transparent;
@@ -163,6 +179,17 @@ input:hover::placeholder {
     line-height: 1em;
     border: none;
     outline: none;
+    font-size: 40px;
+    font-weight: 100;
+    /* transform: rotate(45deg); */
+}
+
+.button-hideform:hover {
+    color: white;
+}
+
+.form-signup-text {
+    color: #0B95D4;
 }
 
 /*----------------------------------GiphySearch----------------------------------*/

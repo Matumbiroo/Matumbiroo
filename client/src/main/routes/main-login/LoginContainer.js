@@ -2,33 +2,26 @@ import React from 'react';
 import LoginComponent from './LoginComponent';
 
 class LoginContainer extends React.Component {
-    constructor(){
+    constructor() {
         super();
         this.state = {
-            className: "signup-form hide"
+            className: null
         }
     }
-    showForm = () => {
-        this.setState(() => {
+    toggleShow = () => {
+        this.setState((prevState) => {
             return {
-                className: "signup-form show-form"
+                className: prevState.className === "show-form" ? null : "show-form"
             }
         })
     }
-    hideForm = () => {
-        this.setState(() => {
-            return {
-                className: "signup-form hide"
-            }
-        })
-    }
+
     render() {
-    return (
-        <LoginComponent
-        className = {this.state.className}
-        showForm = {this.showForm}
-        hideForm = {this.hideForm}
-        />
+        return (
+            <LoginComponent
+                toggleShow={this.toggleShow}
+                className={this.state.className}
+            />
         )
     }
 }
