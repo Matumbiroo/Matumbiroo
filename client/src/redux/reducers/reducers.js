@@ -20,7 +20,8 @@ const initialState = {
         product: null,
         type: null,
         uri: null,
-    }
+    },
+    recentlyPlayed: [],
 };
 
 const mainReducer = function(state = initialState, action) {
@@ -45,7 +46,11 @@ const mainReducer = function(state = initialState, action) {
         // currently no failure state :(
         case SPOTIFY_ME_FAILURE:
             return state;
-
+        case "SET_RECENTLY_PLAYED":
+            return {
+                ...state,
+                recentlyPlayed: action.recent
+            };
         default:
             return state;
     }

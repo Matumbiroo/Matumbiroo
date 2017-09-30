@@ -15,6 +15,7 @@ export function setTokens({accessToken, refreshToken}) {
     if (accessToken) {
         spotifyApi.setAccessToken(accessToken);
     }
+
     return { type: SPOTIFY_TOKENS, accessToken, refreshToken };
 }
 
@@ -31,8 +32,12 @@ export function getMyInfo() {
 
 export function getRecentFifty(accessToken) {
     return dispatch => {
-        return axios.get(`https://api.spotify.com/v1/me/player/recently-played/search`, {headers: {"Authorization": `Bearer ${accessToken}`}}).then((response)=> {
-
+        return axios.get(`https://api.spotify.com/v1/me/player/recently-played?limit=50`, {headers: {"Authorization": `Bearer ${accessToken}`}}).then((response)=> {
+            console.log(response.data);
+            let recents = response.data.items;
+            dispatch(setRecentlyPlayed(recents))
+        }).catch((error) => {
+            throw error;
         })
     }
 }
