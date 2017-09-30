@@ -7,9 +7,8 @@ class HomeContainer extends React.Component {
     componentDidMount() {
         // params injected via react-router, dispatch injected via connect
         const {accessToken, refreshToken} = this.props.match.params;
-        this
-            .props
-            .setTokens({accessToken, refreshToken});
+        this.props.setTokens({accessToken, refreshToken});
+        this.props.getMyInfo();
     }
     render() {
         const {accessToken, refreshToken, user} = this.props;
@@ -32,7 +31,7 @@ class HomeContainer extends React.Component {
             return <h2>Loading...</h2>;
         }
     return (
-        <HomeComponent/>
+        <HomeComponent accessToken={accessToken} refreshToken={refreshToken}/>
         )
     }
 }
