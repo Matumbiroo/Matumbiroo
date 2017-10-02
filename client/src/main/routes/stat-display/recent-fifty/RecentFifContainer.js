@@ -53,7 +53,10 @@ class RecentFifContainer extends React.Component {
                 song={song}
                 index={index}
                 accessToken={this.props.accessToken} refreshToken={this.props.refreshToken}
-
+                id={song.track.id}
+                getCurrentSong={this.props.getCurrentSong}
+                getCurrentSongAudio={this.props.getCurrentSongAudio}
+                setTokens={this.props.setTokens}
             />
 
 
@@ -62,6 +65,7 @@ class RecentFifContainer extends React.Component {
 
 
     render() {
+        console.log(this.props.recentlyPlayed);
     return (
         <RecentFifComponent
             genRecentFifty={this.genRecentFifty}

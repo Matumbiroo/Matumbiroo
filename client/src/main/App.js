@@ -21,7 +21,7 @@ class App extends React.Component {
                     <Route exact path="/playlists" component={RecentFifContainer}/>
                     <Route exact path="/songs" component={RecentFifContainer}/>
                     <Route exact path="/side-bar" component={RecentFifContainer}/>
-                    <Route exact path="/song/:accessToken/:refreshToken/:index" component={GiphifyContainer}/>
+                    <Route exact path="/song/:accessToken/:refreshToken/:id" component={GiphifyContainer}/>
                 </Switch>
             </BrowserRouter>
         )

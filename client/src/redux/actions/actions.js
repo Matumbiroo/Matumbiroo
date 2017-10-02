@@ -40,9 +40,9 @@ export function getRecentFifty(accessToken) {
         })
     }
 }
-export function getCurrentSong(accessToken) {
+export function getCurrentSong(accessToken, id) {
     return dispatch => {
-        return axios.get(`https://api.spotify.com/v1/tracks/${'id'}`, {headers: {"Authorization": `Bearer ${accessToken}`}}).then((response)=> {
+        return axios.get(`https://api.spotify.com/v1/tracks/${id}`, {headers: {"Authorization": `Bearer ${accessToken}`}}).then((response)=> {
             let currentSong = response.data;
             dispatch(setCurrentSong(currentSong))
         }).catch((error) => {
@@ -51,9 +51,9 @@ export function getCurrentSong(accessToken) {
     }
 }
 
-export function getCurrentSongAudio(accessToken) {
+export function getCurrentSongAudio(accessToken, id) {
     return dispatch => {
-        return axios.get(`https://api.spotify.com/v1/audio-features/${'id'}`,{headers: {"Authorization": `Bearer ${accessToken}`}}).then((response)=> {
+        return axios.get(`https://api.spotify.com/v1/audio-features/${id}`,{headers: {"Authorization": `Bearer ${accessToken}`}}).then((response)=> {
             let currentSongAudio = response.data;
             dispatch(setCurrentSongAudio(currentSongAudio))
         }).catch((error) => {
