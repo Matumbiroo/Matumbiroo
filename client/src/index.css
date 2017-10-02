@@ -38,7 +38,6 @@ body {
     text-align: center;
     outline-color: white;
     outline-width: 1.5px;
-    z-index: 5;
 }
 
 .btn-login:hover {
@@ -61,7 +60,6 @@ body {
     /* color: #0b95d4; */
     color: black;
     outline: none;
-    z-index: 5;
 }
 
 .btn-signup:hover {
