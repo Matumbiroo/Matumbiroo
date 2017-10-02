@@ -33,7 +33,6 @@ export function getMyInfo() {
 export function getRecentFifty(accessToken) {
     return dispatch => {
         return axios.get(`https://api.spotify.com/v1/me/player/recently-played?limit=50`, {headers: {"Authorization": `Bearer ${accessToken}`}}).then((response)=> {
-            console.log(response.data);
             let recents = response.data.items;
             dispatch(setRecentlyPlayed(recents))
         }).catch((error) => {
@@ -41,11 +40,60 @@ export function getRecentFifty(accessToken) {
         })
     }
 }
+export function getAudioFeatures(accessToken) {
+    return dispatch => {
+        return axios.get(`https://api.spotify.com/v1/me/player/recently-played?limit=50`, {headers: {"Authorization": `Bearer ${accessToken}`}}).then((response)=> {
+            let recents = response.data.items;
+            // console.log(recents);
+            let reducedIds = recents.map((song, index)=> {
+                    return song.track.id;
+                });
+            reducedIds = reducedIds.join(',');
+            axios.get(`https://api.spotify.com/v1/audio-features?ids=${reducedIds}`, {headers: {"Authorization": `Bearer ${accessToken}`}}).then((response)=> {
+                let audioFeatures = response.data.audio_features;
+                dispatch(setAudioFeatures(audioFeatures))
+            })
+                .catch((err)=> {
+                console.error(err);
+                })
+        }).catch((error)=> {
+            console.error(error);
+        })
+    }
+}
+
+export function setAudioFeatures(audioFeatures) {
+    return {
+        type: "SET_AUDIO_FEATURES",
+        audioFeatures
+    }
+}
 
 export function setRecentlyPlayed(recent) {
     return {
         type: "SET_RECENTLY_PLAYED",
         recent
+    }
+}
+
+export function giphify(artist, song) {
+    return dispatch => {
+        return axios.get(`http://api.giphy.com/v1/gifs/search?q=happy+dance&api_key=pvXAxC0LmMyuslSuN1KEXVbHskcFITbw&limit=5`,
+            {headers: {"Accept": "image/*"}}
+            )
+            .then((response) => {
+                let gifs = response.data.data;
+                dispatch(setGifs(gifs));
+            })
+            .catch((error)=> {
+                console.log(error);
+            })
+    }
+}
+export function setGifs(gifs) {
+    return {
+        type: "SET_GIFS",
+        gifs
     }
 }
 

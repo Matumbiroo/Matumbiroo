@@ -22,6 +22,8 @@ const initialState = {
         uri: null,
     },
     recentlyPlayed: [],
+    audioFeatures: [],
+    gifs: [],
 };
 
 const mainReducer = function(state = initialState, action) {
@@ -50,6 +52,16 @@ const mainReducer = function(state = initialState, action) {
             return {
                 ...state,
                 recentlyPlayed: action.recent
+            };
+        case "SET_AUDIO_FEATURES":
+            return {
+                ...state,
+                audioFeatures: action.audioFeatures
+            };
+        case "SET_GIFS":
+            return {
+                ...state,
+                gifs: action.gifs
             };
         default:
             return state;
