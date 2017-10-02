@@ -9,7 +9,6 @@ class RecentFifComponent extends React.Component {
             <div className="scroll-view">Scroll View
                 {this.props.genRecentFifty()}
             </div>
-
         </div>
         )
     }

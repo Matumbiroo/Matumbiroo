@@ -2,16 +2,22 @@ import React from 'react';
 import RecentFifComponent from "./RecentFifComponent";
 import {connect} from 'react-redux';
 import * as actionCreators from '../../../../redux/actions/actions';
+import SongComponent from './SongComponent';
 
 class RecentFifContainer extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            artist: null,
+            song: null,
+        }
+    }
     componentDidMount() {
-        this.props.giphify();
         const {accessToken, refreshToken} = this.props.match.params;
         this.props.setTokens({accessToken, refreshToken});
         this.props.getMyInfo();
         this.props.getRecentFifty(accessToken);
         this.props.getAudioFeatures(accessToken);
-
     }
     genDanceability=()=> {
         return this.props.audioFeatures.map((audio, index)=> {
@@ -23,30 +29,38 @@ class RecentFifContainer extends React.Component {
             return audio.valence;
         })
     };
-    genSpeechiness =()=> {
-        return this.props.audioFeatures.map((audio, index)=> {
-            return audio.speechiness;
+    genGifs =()=> {
+        return this.props.gifs.map((gif, index)=> {
+            return <img className="gifs" key={gif + index} src={gif.images.fixed_height.url} alt="" width="200px" height="200px"/>
         })
     };
-
+    genGifInputs = ()=> {
+        return this.props.recentlyPlayed.map((song, index)=> {
+            return {
+                artist: song.track.artists[0].name,
+                song: song.track.name
+            }
+        })
+    };
     genRecentFifty =()=> {
         let danceability = this.genDanceability();
         let valence = this.genValence();
-        let speechiness = this.genSpeechiness();
+
         return this.props.recentlyPlayed.map((song, index) => {
-            return <div className="song-component" key={index + song.track.name}>{(index + 1) + ". " + song.track.name} <br/>
-                Artist: {song.track.artists[0].name} <br/>
-                Danceability: {danceability[index]} <br/>
-                Valence: {valence[index]}<br/>
-                Speechiness: {speechiness[index]}<br/>
-                <button>Giphify</button>
-            </div>
+            return <SongComponent key={index + song.track.name}
+                danceability={danceability[index]}
+                valence={valence[index]}
+                song={song}
+                index={index}
+
+            />
+
+
         })
     };
 
 
     render() {
-        console.log(this.props.gifs);
     return (
         <RecentFifComponent
             genRecentFifty={this.genRecentFifty}

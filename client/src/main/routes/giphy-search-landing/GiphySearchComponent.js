@@ -7,11 +7,6 @@ class GiphySearchComponent extends Component {
     componentDidMount() {
         this.props.giphify();
     }
-    genGifs =()=> {
-        return this.props.gifs.map((gif, index)=> {
-            return gif.images.embed_url;
-        })
-    };
     render() {
     return (
         <div className="wrapper">
@@ -21,7 +16,6 @@ class GiphySearchComponent extends Component {
                 <a href="http://localhost:8080/login"><button className="login-btn">Login with Spotify</button></a>
             </div>
             <input className="search-bar" type="text"/>
-            <img src={this.genGifs()} alt=""/>
         </div>
         )
     }

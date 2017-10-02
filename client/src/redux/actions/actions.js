@@ -42,7 +42,7 @@ export function getRecentFifty(accessToken) {
 }
 export function getAudioFeatures(accessToken) {
     return dispatch => {
-        return axios.get(`https://api.spotify.com/v1/me/player/recently-played?limit=50`, {headers: {"Authorization": `Bearer ${accessToken}`}}).then((response)=> {
+        return axios.get(`http://api.spotify.com/v1/me/player/recently-played?limit=50`, {headers: {"Authorization": `Bearer ${accessToken}`}}).then((response)=> {
             let recents = response.data.items;
             // console.log(recents);
             let reducedIds = recents.map((song, index)=> {
@@ -76,9 +76,9 @@ export function setRecentlyPlayed(recent) {
     }
 }
 
-export function giphify(artist, song) {
+export function giphify(gifInputs) {
     return dispatch => {
-        return axios.get(`http://api.giphy.com/v1/gifs/search?q=happy+dance&api_key=pvXAxC0LmMyuslSuN1KEXVbHskcFITbw&limit=5`,
+        return axios.get(`http://api.giphy.com/v1/gifs/search?q=${null}+${null}&api_key=pvXAxC0LmMyuslSuN1KEXVbHskcFITbw&limit=20`,
             {headers: {"Accept": "image/*"}}
             )
             .then((response) => {
