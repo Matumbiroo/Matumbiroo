@@ -52,6 +52,7 @@ class RecentFifContainer extends React.Component {
                 valence={valence[index]}
                 song={song}
                 index={index}
+                accessToken={this.props.accessToken} refreshToken={this.props.refreshToken}
 
             />
 

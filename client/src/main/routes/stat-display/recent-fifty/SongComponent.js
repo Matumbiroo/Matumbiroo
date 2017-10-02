@@ -1,6 +1,10 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 class SongComponent extends React.Component {
+    constructor(props) {
+        super(props);
+    }
     render() {
     return (
         <div>
@@ -8,7 +12,7 @@ class SongComponent extends React.Component {
             Artist: {this.props.song.track.artists[0].name}<br/>
             Danceability: {this.props.danceability}<br/>
             Valence: {this.props.valence}<br/>
-            <Link to="/song/:id"><button>Giphify</button></Link>
+            <Link to={`/song/${this.props.index}/${this.props.accessToken}/${this.props.refreshToken}`}><button>Giphify</button></Link>
         </div>
         )
     }

@@ -36,10 +36,33 @@ export function getRecentFifty(accessToken) {
             let recents = response.data.items;
             dispatch(setRecentlyPlayed(recents))
         }).catch((error) => {
-            throw error;
+            console.error(error);
         })
     }
 }
+export function getCurrentSong(accessToken) {
+    return dispatch => {
+        return axios.get(`https://api.spotify.com/v1/tracks/${'id'}`, {headers: {"Authorization": `Bearer ${accessToken}`}}).then((response)=> {
+            let currentSong = response.data;
+            dispatch(setCurrentSong(currentSong))
+        }).catch((error) => {
+            console.error(error);
+        })
+    }
+}
+
+export function getCurrentSongAudio(accessToken) {
+    return dispatch => {
+        return axios.get(`https://api.spotify.com/v1/audio-features/${'id'}`,{headers: {"Authorization": `Bearer ${accessToken}`}}).then((response)=> {
+            let currentSongAudio = response.data;
+            dispatch(setCurrentSongAudio(currentSongAudio))
+        }).catch((error) => {
+            console.error(error);
+        })
+    }
+}
+
+
 export function getAudioFeatures(accessToken) {
     return dispatch => {
         return axios.get(`http://api.spotify.com/v1/me/player/recently-played?limit=50`, {headers: {"Authorization": `Bearer ${accessToken}`}}).then((response)=> {
@@ -59,6 +82,20 @@ export function getAudioFeatures(accessToken) {
         }).catch((error)=> {
             console.error(error);
         })
+    }
+}
+
+export function setCurrentSongAudio(currentSongAudio) {
+    return {
+        type: "SET_CURRENT_SONG_AUDIO",
+        currentSongAudio
+    }
+}
+
+export function setCurrentSong(currentSong) {
+    return {
+        type: "SET_CURRENT_SONG",
+        currentSong
     }
 }
 

@@ -24,6 +24,8 @@ const initialState = {
     recentlyPlayed: [],
     audioFeatures: [],
     gifs: [],
+    currentSong: null,
+    currentSongAudio: [],
 };
 
 const mainReducer = function(state = initialState, action) {
@@ -62,6 +64,11 @@ const mainReducer = function(state = initialState, action) {
             return {
                 ...state,
                 gifs: action.gifs
+            };
+        case "SET_CURRENT_SONG":
+            return {
+                ...state,
+                currentSong: action.currentSong,
             };
         default:
             return state;

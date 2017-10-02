@@ -6,6 +6,7 @@ import HomeContainer from "./routes/home-view/HomeContainer";
 import LoginContainer from "./routes/main-login/LoginContainer";
 import GiphySearchContainer from "./routes/giphy-search-landing/GiphySearchContainer";
 import RecentFifContainer from "./routes/stat-display/recent-fifty/RecentFifContainer";
+import GiphifyContainer from "./routes/stat-display/giphified-button/GiphifyContainer";
 
 class App extends React.Component {
     render() {
@@ -20,6 +21,7 @@ class App extends React.Component {
                     <Route exact path="/playlists" component={RecentFifContainer}/>
                     <Route exact path="/songs" component={RecentFifContainer}/>
                     <Route exact path="/side-bar" component={RecentFifContainer}/>
+                    <Route exact path="/song/:accessToken/:refreshToken/:index" component={GiphifyContainer}/>
                 </Switch>
             </BrowserRouter>
         )
