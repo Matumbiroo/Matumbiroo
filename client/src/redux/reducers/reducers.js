@@ -23,8 +23,15 @@ const initialState = {
     },
     recentlyPlayed: [],
     audioFeatures: [],
-    gifs: [],
-    currentSong: null,
+    currentSong: {
+        name: null,
+        artists: [{name: ""}],
+        gifs: [{images: {
+            fixed_height: {
+                webp: ""
+            }
+        }}]
+    },
     currentSongAudio: [],
 };
 
@@ -63,7 +70,10 @@ const mainReducer = function(state = initialState, action) {
         case "SET_GIFS":
             return {
                 ...state,
-                gifs: action.gifs
+                currentSong: {
+                    ...state.currentSong,
+                    gifs: action.gifs
+                }
             };
         case "SET_CURRENT_SONG":
             return {

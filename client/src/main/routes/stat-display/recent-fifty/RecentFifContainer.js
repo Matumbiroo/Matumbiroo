@@ -48,8 +48,8 @@ class RecentFifContainer extends React.Component {
 
         return this.props.recentlyPlayed.map((song, index) => {
             return <SongComponent key={index + song.track.name}
-                danceability={danceability[index]}
-                valence={valence[index]}
+                danceability={danceability}
+                valence={valence}
                 song={song}
                 index={index}
                 accessToken={this.props.accessToken} refreshToken={this.props.refreshToken}
@@ -65,7 +65,6 @@ class RecentFifContainer extends React.Component {
 
 
     render() {
-        console.log(this.props.recentlyPlayed);
     return (
         <RecentFifComponent
             genRecentFifty={this.genRecentFifty}
