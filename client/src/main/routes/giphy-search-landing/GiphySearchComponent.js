@@ -4,9 +4,6 @@ import * as actionCreators from '../../../redux/actions/actions';
 
 
 class GiphySearchComponent extends Component {
-    componentDidMount() {
-        this.props.giphify();
-    }
     render() {
     return (
         <div className="wrapper">

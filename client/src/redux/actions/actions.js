@@ -44,6 +44,11 @@ export function getCurrentSong(accessToken, id) {
     return dispatch => {
         return axios.get(`https://api.spotify.com/v1/tracks/${id}`, {headers: {"Authorization": `Bearer ${accessToken}`}}).then((response)=> {
             let currentSong = response.data;
+            currentSong.gifs = [{images: {
+                fixed_height: {
+                    webp: ""
+                }
+            }}]
             dispatch(setCurrentSong(currentSong))
         }).catch((error) => {
             console.error(error);
@@ -65,14 +70,14 @@ export function getCurrentSongAudio(accessToken, id) {
 
 export function getAudioFeatures(accessToken) {
     return dispatch => {
-        return axios.get(`http://api.spotify.com/v1/me/player/recently-played?limit=50`, {headers: {"Authorization": `Bearer ${accessToken}`}}).then((response)=> {
+        return axios.get(`https://api.spotify.com/v1/me/player/recently-played?limit=50`,{headers: {"Authorization": `Bearer ${accessToken}`}}).then((response)=> {
             let recents = response.data.items;
-            // console.log(recents);
             let reducedIds = recents.map((song, index)=> {
                     return song.track.id;
                 });
             reducedIds = reducedIds.join(',');
-            axios.get(`https://api.spotify.com/v1/audio-features?ids=${reducedIds}`, {headers: {"Authorization": `Bearer ${accessToken}`}}).then((response)=> {
+            axios.get(`https://api.spotify.com/v1/audio-features?ids=${reducedIds}`,{headers: {"Authorization": `Bearer ${accessToken}`}}).then((response)=> {
+
                 let audioFeatures = response.data.audio_features;
                 dispatch(setAudioFeatures(audioFeatures))
             })
@@ -93,6 +98,7 @@ export function setCurrentSongAudio(currentSongAudio) {
 }
 
 export function setCurrentSong(currentSong) {
+
     return {
         type: "SET_CURRENT_SONG",
         currentSong
@@ -113,9 +119,9 @@ export function setRecentlyPlayed(recent) {
     }
 }
 
-export function giphify(gifInputs) {
+export function giphify(artist, song) {
     return dispatch => {
-        return axios.get(`http://api.giphy.com/v1/gifs/search?q=${null}+${null}&api_key=pvXAxC0LmMyuslSuN1KEXVbHskcFITbw&limit=20`,
+        return axios.get(`http://api.giphy.com/v1/gifs/search?q=${artist}+${song}&api_key=pvXAxC0LmMyuslSuN1KEXVbHskcFITbw&limit=20`,
             {headers: {"Accept": "image/*"}}
             )
             .then((response) => {
