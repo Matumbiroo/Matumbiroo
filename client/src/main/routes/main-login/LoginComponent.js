@@ -7,9 +7,7 @@ class LoginComponent extends React.Component {
         <div className="main container">
             <div className="row">
                 <div className="buttons">
-                    <Link to="/giphy">
-                        <button onClick={this.props.toggleLogin}className="btn-login">log in</button>
-                    </Link>
+                    <button onClick={this.props.toggleLogin}className="btn-login">log in</button>
                     <button onClick={this.props.toggleShow}className="btn-signup">sign up</button>
                 </div>
             </div>
@@ -32,7 +30,9 @@ class LoginComponent extends React.Component {
                     <h3 className="form-signup-text">/ Log In /</h3>
                     <input placeholder="Username or Email"type="text"/>
                     <input placeholder="Password"type="password"/>
-                    <button className="button-conf-login">Log in</button>
+                    <Link to="/giphy">
+                        <button className="button-conf-login">Log in</button>
+                    </Link>
                 </form>
             </div>
         </div>
