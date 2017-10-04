@@ -22,7 +22,7 @@ class User extends React.Component {
             : "";
         // if we're still loading, indicate such
         if (loading) {
-            return <h2>Loading...</h2>;
+            return <h2 className="blue-period">Loading<span className="blue-period">...</span></h2>;
         }
         return (
             <div className="user">
