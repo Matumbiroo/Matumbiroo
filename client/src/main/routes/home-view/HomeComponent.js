@@ -17,8 +17,7 @@ class HomeComponent extends React.Component {
         <div className="home-component-wrapper">
             <Link to={`/recent-fifty/${this.props.accessToken}/${this.props.refreshToken}`} className="recent-fifty-box" >
                 <div className="album-art">
-                    {/*<img className="album-art" src={this.props.imageUrl1}/>*/}
-                    {/*<img className="album-art" src={this.props.imageUrl1}/>*/}
+                    {this.props.genAlbums()}
                 </div>
             </Link>
             <Link to="/playlists" className="playlists-box" >Playlists</Link>

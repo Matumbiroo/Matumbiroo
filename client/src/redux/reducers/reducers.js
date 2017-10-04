@@ -22,8 +22,6 @@ const initialState = {
         uri: null,
     },
     recentlyPlayed: [],
-    recentImgUrl1: "",
-    recentImgUrl2: "",
     audioFeatures: [],
     currentSong: {
         name: null,
@@ -63,8 +61,6 @@ const mainReducer = function(state = initialState, action) {
             return {
                 ...state,
                 recentlyPlayed: action.recent,
-                recentImgUrl1: action.imageUrl1,
-                recentImgUrl2: action.imageUrl2,
 
             };
         case "SET_AUDIO_FEATURES":
