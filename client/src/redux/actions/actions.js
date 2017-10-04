@@ -36,7 +36,7 @@ export function getRecentFifty(accessToken) {
             let recents = response.data.items;
             // console.log('response.data.items', response.data.items[0].track.album.images[1].url);
             // let imageUrl1 = response.data.items[0].track.album.images[1].url;
-            dispatch(setRecentlyPlayed(recents, imageUrl1, imageUrl2))
+            dispatch(setRecentlyPlayed(recents))
         }).catch((error) => {
             console.error(error);
         })
