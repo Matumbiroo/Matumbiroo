@@ -19,6 +19,27 @@ class RecentFifContainer extends React.Component {
         this.props.getRecentFifty(accessToken);
         this.props.getAudioFeatures(accessToken);
     }
+    genDuration=()=> {
+        return this.props.audioFeatures.map((audio, index) => {
+            // let seconds = ((audio.duration_ms % 60000) / 1000).toFixed(0);
+            return Math.floor(audio.duration_ms / 60000) + ":" + ((audio.duration_ms % 60000) / 1000).toFixed(0);
+        })
+    }
+    genTempo=()=> {
+        return this.props.audioFeatures.map((audio, index) => {
+            return audio.tempo;
+        })
+    }
+    genEnergy=()=> {
+        return this.props.audioFeatures.map((audio, index) => {
+            return audio.energy;
+        })
+    }
+    genMusicKey=()=> {
+        return this.props.audioFeatures.map((audio, index) => {
+            return audio.key;
+        })
+    }
     genDanceability=()=> {
         return this.props.audioFeatures.map((audio, index)=> {
             return audio.danceability;
@@ -45,11 +66,19 @@ class RecentFifContainer extends React.Component {
     genRecentFifty =()=> {
         let danceability = this.genDanceability();
         let valence = this.genValence();
+        let musicKey = this.genMusicKey();
+        let tempo = this.genTempo();
+        let energy = this.genEnergy();
+        let duration = this.genDuration();
 
         return this.props.recentlyPlayed.map((song, index) => {
             return <SongComponent key={index + song.track.name}
                 danceability={danceability}
                 valence={valence}
+                musicKey={musicKey}
+                tempo={tempo}
+                energy={energy}
+                duration={duration}
                 song={song}
                 index={index}
                 accessToken={this.props.accessToken} refreshToken={this.props.refreshToken}
