@@ -289,36 +289,45 @@ input:hover::placeholder {
 .home-component-wrapper {
     display : grid;
     grid-template-columns: 36vw 36vw 28vw;
-    grid-template-rows: 47vh 47vh;
-    grid-gap: 10px;
-    margin: 10px;
+    grid-template-rows: 40vh 40vh;
+    grid-gap: 40px;
+    margin: 40px;
 }
 
 .recent-fifty-box {
     grid-column: 1 / 3;
     grid-row: 1;
-    background-color: #0b95d4;
     height: 100%;
+    display: grid;
+    background-color: white;
+}
+.recent-fifty-box:hover {
+    text-decoration: none;
 }
 
 .playlists-box {
     grid-column: 1;
     grid-row: 2;
-    background-color: #0b95d4;
     height: 100%;
+    background-color: white;
+
 }
 
 .songs-box {
     grid-column: 2;
     grid-row: 2;
-    background-color: #0b95d4;
     height: 100%;
+    background-color: white;
+    padding: 20px;
+
 }
 
 .side-bar-box {
     grid-column: 3;
     grid-row: 1 / 3;
-    background-color: #0b95d4;
+    background-color: white;
+    padding: 20px;
+
 }
 .home-links {
 
@@ -442,8 +451,12 @@ input:hover::placeholder {
     margin-top: 30px;
 }
 
-/*----------------------------------Gifs----------------------------------*/
+/*----------------------------------Album Art----------------------------------*/
 
-.gifs {
-
+.album-art {
+    display: block;
+    height: 40vh;
+    width: auto;
+    margin-right: auto;
+    overflow-y: scroll;
 }
