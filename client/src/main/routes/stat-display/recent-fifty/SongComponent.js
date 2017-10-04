@@ -9,6 +9,7 @@ class SongComponent extends React.Component {
     return (
         <div>
             <br/>
+            Title: {this.props.song.track.name}<br/>
             Artist: {this.props.song.track.artists[0].name}<br/>
             Danceability: {this.props.danceability[this.props.index]}<br/>
             Valence: {this.props.valence[this.props.index]}<br/>
