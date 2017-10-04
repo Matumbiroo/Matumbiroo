@@ -36,8 +36,8 @@ class HomeContainer extends React.Component {
         <HomeComponent
             accessToken={accessToken}
             refreshToken={refreshToken}
-            imageUrl1={this.props.recentImgUrl1}
-            imageUrl2={this.props.recentImgUrl2}
+            // imageUrl1={this.props.recentImgUrl1}
+            // imageUrl2={this.props.recentImgUrl2}
         />
         )
     }
