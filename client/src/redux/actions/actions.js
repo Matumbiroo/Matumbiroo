@@ -42,14 +42,30 @@ export function getRecentFifty(accessToken) {
 }
 export function getCurrentSong(accessToken, id) {
     return dispatch => {
+        dispatch(clearGifs());
         return axios.get(`https://api.spotify.com/v1/tracks/${id}`, {headers: {"Authorization": `Bearer ${accessToken}`}}).then((response)=> {
             let currentSong = response.data;
-            currentSong.gifs = [{images: {
-                fixed_height: {
-                    webp: ""
-                }
-            }}]
-            dispatch(setCurrentSong(currentSong))
+            let artist = currentSong.artists[0].name;
+            let song = currentSong.name;
+            axios.get(`http://api.giphy.com/v1/gifs/search?q=${artist}&api_key=pvXAxC0LmMyuslSuN1KEXVbHskcFITbw&limit=10`,
+                {headers: {"Accept": "image/*"}}
+            )
+                .then((response) => {
+                    currentSong.gifs = response.data.data;
+                    axios.get(`http://api.giphy.com/v1/gifs/search?q=${song}&api_key=pvXAxC0LmMyuslSuN1KEXVbHskcFITbw&limit=10`,
+                        {headers: {"Accept": "image/*"}}
+                    )
+                        .then((response) => {
+                            currentSong.gifs = [...currentSong.gifs, ...response.data.data];
+                            dispatch(setCurrentSong(currentSong))
+                        })
+                        .catch((error)=> {
+                            console.log(error);
+                        });
+                })
+                .catch((error)=> {
+                    console.log(error);
+                });
         }).catch((error) => {
             console.error(error);
         })
@@ -119,24 +135,9 @@ export function setRecentlyPlayed(recent) {
     }
 }
 
-export function giphify(artist, song) {
-    return dispatch => {
-        return axios.get(`http://api.giphy.com/v1/gifs/search?q=${artist}+${song}&api_key=pvXAxC0LmMyuslSuN1KEXVbHskcFITbw&limit=20`,
-            {headers: {"Accept": "image/*"}}
-            )
-            .then((response) => {
-                let gifs = response.data.data;
-                dispatch(setGifs(gifs));
-            })
-            .catch((error)=> {
-                console.log(error);
-            })
-    }
-}
-export function setGifs(gifs) {
+function clearGifs() {
     return {
-        type: "SET_GIFS",
-        gifs
+        type: "CLEAR_GIFS",
     }
 }
 

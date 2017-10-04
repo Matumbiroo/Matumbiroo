@@ -11,7 +11,7 @@ class GiphifyComponent extends React.Component {
         <div>
             <div>Title: {song}</div>
             <div>Artist: {artist} </div>
-            <div>{this.props.genGifs()}</div>
+            {this.props.genGifs()}
         </div>
         )
     }
