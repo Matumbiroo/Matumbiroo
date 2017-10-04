@@ -4,11 +4,8 @@
     <list default="true" id="d7c9bb2a-e7b4-40d1-bbba-4aa4fbf64c29" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/index.js" afterPath="$PROJECT_DIR$/client/src/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main/routes/giphy-search-landing/GiphySearchComponent.js" afterPath="$PROJECT_DIR$/client/src/main/routes/giphy-search-landing/GiphySearchComponent.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main/routes/stat-display/giphified-button/GiphifyComponent.js" afterPath="$PROJECT_DIR$/client/src/main/routes/stat-display/giphified-button/GiphifyComponent.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main/routes/stat-display/giphified-button/GiphifyContainer.js" afterPath="$PROJECT_DIR$/client/src/main/routes/stat-display/giphified-button/GiphifyContainer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main/routes/stat-display/recent-fifty/RecentFifContainer.js" afterPath="$PROJECT_DIR$/client/src/main/routes/stat-display/recent-fifty/RecentFifContainer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main/routes/stat-display/recent-fifty/SongComponent.js" afterPath="$PROJECT_DIR$/client/src/main/routes/stat-display/recent-fifty/SongComponent.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/redux/actions/actions.js" afterPath="$PROJECT_DIR$/client/src/redux/actions/actions.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/redux/reducers/reducers.js" afterPath="$PROJECT_DIR$/client/src/redux/reducers/reducers.js" />
     </list>
@@ -42,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GiphifyContainer.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GiphifyContainer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/main/routes/stat-display/giphified-button/GiphifyContainer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="510">
+              <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -54,11 +51,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GiphySearchContainer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/main/routes/giphy-search-landing/GiphySearchContainer.js">
+      <file leaf-file-name="SongComponent.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/main/routes/stat-display/recent-fifty/SongComponent.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+            <state relative-caret-position="210">
+              <caret line="14" column="112" lean-forward="false" selection-start-line="14" selection-start-column="112" selection-end-line="14" selection-end-column="112" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+                <marker date="1506997381000" expanded="true" signature="206:577" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SongsContainer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/main/routes/stat-display/songs/SongsContainer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SongsComponent.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/main/routes/stat-display/songs/SongsComponent.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -74,16 +94,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeContainer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/main/routes/home-view/HomeContainer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="27" column="17" lean-forward="false" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="GiphifyComponent.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/main/routes/stat-display/giphified-button/GiphifyComponent.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -94,47 +104,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SongComponent.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/main/routes/stat-display/recent-fifty/SongComponent.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-                <marker date="1506988939000" expanded="true" signature="206:577" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="actions.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/redux/actions/actions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-371">
-              <caret line="50" column="15" lean-forward="false" selection-start-line="50" selection-start-column="15" selection-end-line="50" selection-end-column="15" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-                <marker date="1506993709000" expanded="true" signature="749:813" ph="{...}" />
-                <marker date="1506993709000" expanded="true" signature="837:899" ph="{...}" />
-                <marker date="1506993709000" expanded="true" signature="4516:4560" ph="{...}" />
-                <marker date="1506993709000" expanded="true" signature="4634:4655" ph="{...}" />
-                <marker date="1506993709000" expanded="true" signature="4891:4922" ph="{...}" />
-                <marker date="1506993709000" expanded="true" signature="4961:4982" ph="{...}" />
-                <marker date="1506993709000" expanded="true" signature="5145:5176" ph="{...}" />
-                <marker date="1506993709000" expanded="true" signature="5215:5236" ph="{...}" />
-                <marker date="1506993709000" expanded="true" signature="5395:5426" ph="{...}" />
-                <marker date="1506993709000" expanded="true" signature="5465:5486" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
-              <folding />
+            <state relative-caret-position="255">
+              <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="actions.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/src/redux/actions/actions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1054">
+              <caret line="62" column="47" lean-forward="true" selection-start-line="62" selection-start-column="47" selection-end-line="62" selection-end-column="47" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+                <marker date="1507132837000" expanded="true" signature="749:813" ph="{...}" />
+                <marker date="1507132837000" expanded="true" signature="837:899" ph="{...}" />
+                <marker date="1507132837000" expanded="true" signature="4905:4949" ph="{...}" />
+                <marker date="1507132837000" expanded="true" signature="5023:5044" ph="{...}" />
+                <marker date="1507132837000" expanded="true" signature="5280:5311" ph="{...}" />
+                <marker date="1507132837000" expanded="true" signature="5350:5371" ph="{...}" />
+                <marker date="1507132837000" expanded="true" signature="5534:5565" ph="{...}" />
+                <marker date="1507132837000" expanded="true" signature="5604:5625" ph="{...}" />
+                <marker date="1507132837000" expanded="true" signature="5784:5815" ph="{...}" />
+                <marker date="1507132837000" expanded="true" signature="5854:5875" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -142,8 +141,8 @@
       <file leaf-file-name="reducers.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/redux/reducers/reducers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="14" lean-forward="false" selection-start-line="28" selection-start-column="14" selection-end-line="32" selection-end-column="11" />
+            <state relative-caret-position="663">
+              <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
               <folding>
                 <element signature="e#0#114#0" expanded="true" />
               </folding>
@@ -206,10 +205,10 @@
         <option value="$PROJECT_DIR$/client/src/main/routes/stat-display/recent-fifty/RecentFifContainer.js" />
         <option value="$PROJECT_DIR$/client/src/main/routes/stat-display/recent-fifty/SongComponent.js" />
         <option value="$PROJECT_DIR$/client/src/main/routes/giphy-search-landing/GiphySearchComponent.js" />
-        <option value="$PROJECT_DIR$/client/src/redux/reducers/reducers.js" />
-        <option value="$PROJECT_DIR$/client/src/index.js" />
         <option value="$PROJECT_DIR$/client/src/main/routes/stat-display/giphified-button/GiphifyComponent.js" />
+        <option value="$PROJECT_DIR$/client/src/index.js" />
         <option value="$PROJECT_DIR$/client/src/main/routes/stat-display/giphified-button/GiphifyContainer.js" />
+        <option value="$PROJECT_DIR$/client/src/redux/reducers/reducers.js" />
         <option value="$PROJECT_DIR$/client/src/redux/actions/actions.js" />
       </list>
     </option>
@@ -314,24 +313,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
-              <item name="giphy-search-landing" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="matumbiroo-repo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="matumbiroo-repo" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-              <item name="home-view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="matumbiroo-repo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="matumbiroo-repo" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
               <item name="stat-display" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -369,6 +350,16 @@
               <item name="matumbiroo-repo" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="stat-display" type="462c0819:PsiDirectoryNode" />
+              <item name="songs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="matumbiroo-repo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="matumbiroo-repo" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="redux" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -391,6 +382,18 @@
               <item name="matumbiroo-repo" type="b2602c69:ProjectViewProjectNode" />
               <item name="matumbiroo-repo" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="matumbiroo-repo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="matumbiroo-repo" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="matumbiroo-repo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="matumbiroo-repo" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -452,7 +455,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51151000" />
+    <option name="totallyTimeSpent" value="56491000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -499,7 +502,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/src/main/routes/stat-display/StatDisplayContainer.js" />
     <entry file="file://$PROJECT_DIR$/client/src/redux/actions/actions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -527,7 +529,7 @@
         <state relative-caret-position="30">
           <caret line="2" column="21" lean-forward="false" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
           <folding>
-            <element signature="e#0#39#0" expanded="false" />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -591,13 +593,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/main/routes/stat-display/playlists/PlaylistsContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="29" lean-forward="false" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/main/routes/stat-display/sidebar/SidebarComponent.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -609,13 +604,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/main/routes/stat-display/songs/SongsComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -642,13 +630,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/main/routes/stat-display/giphified-button/Giphify-component.js" />
     <entry file="file://$PROJECT_DIR$/client/src/main/routes/stat-display/giphified-button/Giphify-container.js" />
-    <entry file="file://$PROJECT_DIR$/client/src/main/routes/stat-display/songs/SongsContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/npm-debug.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -669,7 +650,7 @@
         <state relative-caret-position="785">
           <caret line="66" column="14" lean-forward="false" selection-start-line="66" selection-start-column="14" selection-end-line="66" selection-end-column="14" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -698,62 +679,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/index.js">
+    <entry file="file://$PROJECT_DIR$/client/src/main/routes/stat-display/playlists/PlaylistsContainer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        <state relative-caret-position="75">
+          <caret line="6" column="29" lean-forward="false" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/main/routes/stat-display/recent-fifty/SongComponent.js">
+    <entry file="file://$PROJECT_DIR$/matumbiroo/src/main/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <marker date="1506988939000" expanded="true" signature="206:577" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/main/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="75" lean-forward="false" selection-start-line="23" selection-start-column="75" selection-end-line="23" selection-end-column="75" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/redux/reducers/reducers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="14" lean-forward="false" selection-start-line="28" selection-start-column="14" selection-end-line="32" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#114#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/redux/actions/actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-371">
-          <caret line="50" column="15" lean-forward="false" selection-start-line="50" selection-start-column="15" selection-end-line="50" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-            <marker date="1506993709000" expanded="true" signature="749:813" ph="{...}" />
-            <marker date="1506993709000" expanded="true" signature="837:899" ph="{...}" />
-            <marker date="1506993709000" expanded="true" signature="4516:4560" ph="{...}" />
-            <marker date="1506993709000" expanded="true" signature="4634:4655" ph="{...}" />
-            <marker date="1506993709000" expanded="true" signature="4891:4922" ph="{...}" />
-            <marker date="1506993709000" expanded="true" signature="4961:4982" ph="{...}" />
-            <marker date="1506993709000" expanded="true" signature="5145:5176" ph="{...}" />
-            <marker date="1506993709000" expanded="true" signature="5215:5236" ph="{...}" />
-            <marker date="1506993709000" expanded="true" signature="5395:5426" ph="{...}" />
-            <marker date="1506993709000" expanded="true" signature="5465:5486" ph="{...}" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -773,6 +711,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/main/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="75" lean-forward="false" selection-start-line="23" selection-start-column="75" selection-end-line="23" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/main/routes/stat-display/songs/SongsContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/main/routes/stat-display/songs/SongsComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/main/routes/stat-display/recent-fifty/SongComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="112" lean-forward="false" selection-start-line="14" selection-start-column="112" selection-end-line="14" selection-end-column="112" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <marker date="1506997381000" expanded="true" signature="206:577" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/main/routes/stat-display/giphified-button/GiphifyComponent.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -781,12 +766,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/redux/reducers/reducers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#114#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/main/routes/stat-display/giphified-button/GiphifyContainer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="510">
+          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/redux/actions/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="62" column="47" lean-forward="true" selection-start-line="62" selection-start-column="47" selection-end-line="62" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+            <marker date="1507132837000" expanded="true" signature="749:813" ph="{...}" />
+            <marker date="1507132837000" expanded="true" signature="837:899" ph="{...}" />
+            <marker date="1507132837000" expanded="true" signature="4905:4949" ph="{...}" />
+            <marker date="1507132837000" expanded="true" signature="5023:5044" ph="{...}" />
+            <marker date="1507132837000" expanded="true" signature="5280:5311" ph="{...}" />
+            <marker date="1507132837000" expanded="true" signature="5350:5371" ph="{...}" />
+            <marker date="1507132837000" expanded="true" signature="5534:5565" ph="{...}" />
+            <marker date="1507132837000" expanded="true" signature="5604:5625" ph="{...}" />
+            <marker date="1507132837000" expanded="true" signature="5784:5815" ph="{...}" />
+            <marker date="1507132837000" expanded="true" signature="5854:5875" ph="{...}" />
           </folding>
         </state>
       </provider>

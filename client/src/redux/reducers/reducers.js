@@ -67,18 +67,22 @@ const mainReducer = function(state = initialState, action) {
                 ...state,
                 audioFeatures: action.audioFeatures
             };
-        case "SET_GIFS":
-            return {
-                ...state,
-                currentSong: {
-                    ...state.currentSong,
-                    gifs: action.gifs
-                }
-            };
         case "SET_CURRENT_SONG":
             return {
                 ...state,
                 currentSong: action.currentSong,
+            };
+        case "CLEAR_GIFS":
+            return {
+                ...state,
+                currentSong: {
+                    ...state.currentSong,
+                    gifs: [{images: {
+                        fixed_height: {
+                            webp: ""
+                        }
+                    }}]
+                }
             };
         default:
             return state;

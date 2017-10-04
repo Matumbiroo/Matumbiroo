@@ -10,16 +10,14 @@ class GiphifyContainer extends React.Component {
         this.props.getMyInfo();
         this.props.getCurrentSong(accessToken, id);
         this.props.getCurrentSongAudio(accessToken, id);
-        this.props.giphify(this.props.currentSong.artists[0].name, this.props.currentSong.name)
 
     }
     genGifs =()=>{
-        return this.props.currentSong.gifs.map((gif, index)=> {
-            return gif.images.fixed_height.webp;
+        return this.props.currentSong.gifs.map((gif, id)=> {
+            return <img key={id} src={gif.images.fixed_height.webp} alt=""/>
         })
     };
     render() {
-       if (!this.props.currentSong.gifs) console.log(this.props);
 
     return (
         <div>
