@@ -330,6 +330,7 @@ input:hover::placeholder {
     grid-template-columns: 36em 1fr 6em;
     grid-template-rows: 15em 1fr;
     grid-gap: 10px;
+    color: black;
 }
 
 .profile-averages {
@@ -339,7 +340,9 @@ input:hover::placeholder {
 .scroll-view {
     grid-column: 2;
     grid-row: 2;
-    background-color: white;
+    background-color: #eeeeee;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .song-component {
     height: 200px;
@@ -347,6 +350,19 @@ input:hover::placeholder {
     margin: 10px;
 }
 
+.song-wrapper {
+    width: 750px;
+    border-radius: 2px;
+    background-color: white;
+    box-sizing: border-box;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    margin-bottom: 15px;
+}
+
+.gifify-btn {
+    border: none;
+    border-radius: 5px;
+}
 /*----------------------------------Gifs----------------------------------*/
 
 .gifs {
