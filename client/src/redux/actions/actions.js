@@ -34,6 +34,8 @@ export function getRecentFifty(accessToken) {
     return dispatch => {
         return axios.get(`https://api.spotify.com/v1/me/player/recently-played?limit=50`, {headers: {"Authorization": `Bearer ${accessToken}`}}).then((response)=> {
             let recents = response.data.items;
+            // console.log('response.data.items', response.data.items[0].track.album.images[1].url);
+            // let imageUrl1 = response.data.items[0].track.album.images[1].url;
             dispatch(setRecentlyPlayed(recents))
         }).catch((error) => {
             console.error(error);
@@ -47,6 +49,7 @@ export function getCurrentSong(accessToken, id) {
             let currentSong = response.data;
             let artist = currentSong.artists[0].name;
             let song = currentSong.name;
+            console.log('response.data', response.data);
             axios.get(`http://api.giphy.com/v1/gifs/search?q=${artist}&api_key=pvXAxC0LmMyuslSuN1KEXVbHskcFITbw&limit=10`,
                 {headers: {"Accept": "image/*"}}
             )
@@ -82,6 +85,7 @@ export function getCurrentSongAudio(accessToken, id) {
         })
     }
 }
+
 
 
 export function getAudioFeatures(accessToken) {
@@ -128,10 +132,12 @@ export function setAudioFeatures(audioFeatures) {
     }
 }
 
-export function setRecentlyPlayed(recent) {
+export function setRecentlyPlayed(recent, imageUrl1, imageUrl2) {
     return {
         type: "SET_RECENTLY_PLAYED",
-        recent
+        recent,
+        imageUrl1,
+        imageUrl2,
     }
 }
 

@@ -60,7 +60,8 @@ const mainReducer = function(state = initialState, action) {
         case "SET_RECENTLY_PLAYED":
             return {
                 ...state,
-                recentlyPlayed: action.recent
+                recentlyPlayed: action.recent,
+
             };
         case "SET_AUDIO_FEATURES":
             return {
