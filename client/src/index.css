@@ -253,7 +253,20 @@ input:hover::placeholder {
 }
 .login-btn {
     grid-column: 8;
+    width: 100%;
+    border: none;
+    border-radius: 500px;
+    background-color: white;
+    color: black;
+    letter-spacing: 1px;
+    font-weight: 500;
 }
+
+.login-btn:hover {
+    /* background-color: #0B95D4; */
+    background-color: #FFFF4F;
+}
+
 .title {
     padding-top: 100px;
     grid-row: 3;
