@@ -7,18 +7,20 @@ class GiphySearchComponent extends Component {
     render() {
     return (
         <div className="wrapper">
-            <h1 className="title">Title Goes Here</h1>
+            <div className="title">
+                <h1>Gif-iphy a Song<span className="blue-period">.</span></h1>
+            </div>
             <div className="login">
-                <h2>Here's our login page!</h2>
+                <h4>Here's our login page!</h4>
                 <a href="http://localhost:8080/login"><button className="login-btn">Login with Spotify</button></a>
             </div>
-            <input className="search-bar" type="text"/>
+            <input placeholder="Search a song to gif-ify it"className="search-bar" type="text"/>
         </div>
         )
     }
 }
 
-const mapStateToProps = (state)=> {
+const mapStateToProps = (state) => {
     return state;
 };
 

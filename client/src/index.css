@@ -1,6 +1,7 @@
 body {
     background-color: #141414;
-    color: #B8B4Bf;
+    /* color: #B8B4Bf; */
+    color: white;
     /* font-family: 'Open Sans', sans-serif; */
 }
 
@@ -17,9 +18,11 @@ body {
 }
 
 .buttons {
+    position: relative;
     margin-top: 50px;
     text-align: right;
     margin-right: 15px;
+    z-index: 6;
 }
 
 .btn-login {
@@ -34,10 +37,10 @@ body {
     display: inline-block;
     text-transform: uppercase;
     color: white;
-    font-family: Gotham SSm,sans-serif;
     text-align: center;
-    outline-color: white;
-    outline-width: 1.5px;
+    outline: none;
+    /* outline-color: white;
+    outline-width: 1.5px; */
 }
 
 .btn-login:hover {
@@ -54,7 +57,7 @@ body {
     display: inline-block;
     height: 50px;
     width: 200px;
-    font-family: Gotham SSm,sans-serif;
+    
     text-align: center;
     background-color: #0B95D4;
     /* color: #0b95d4; */
@@ -86,13 +89,17 @@ body {
     border-bottom: #0B95D4 5px solid;
 }
 
-.welcome h4 {
+/* .welcome h4 {
     padding-left: 25px;
     padding-bottom: 10px;
-}
+    font-weight: 100;
+} */
 
 .welcome p {
-    color: lightgrey;
+    font-size: 18px;
+    padding-left: 25px;
+    /* font-weight: 300 */
+    color: white;
 }
 
 .blue-period {
@@ -123,7 +130,7 @@ body {
     width: 330px;
 }
 
-input {
+.main input {
     background-color: transparent;
     margin-bottom: 15px;
     width: 100%;
@@ -190,6 +197,40 @@ input:hover::placeholder {
     color: #0B95D4;
 }
 
+.button-conf-login {
+    margin-top: 10px;
+    height: 30px;
+    width: 200px;
+    background-color: white;
+    color: black;
+    border: none;
+    text-transform: uppercase;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    outline-color: white;
+    outline-width: 1.5px;
+    width: 100%;
+}
+
+.button-conf-login:hover {
+    background-color: #FFFF4F;
+}
+
+.login-form-default {
+    width: 330px;
+    left: 0;
+    padding-top: 72px;
+    transform: translateX(500%);
+    transition: transform 0.25s ease-in-out;
+}
+
+.login-form-show {
+    /* text-align: right; */
+    /* transform: translateX(0%); */
+    transform: translateX(245%);
+}
+
 /*----------------------------------GiphySearch----------------------------------*/
 
 .wrapper {
@@ -198,6 +239,15 @@ input:hover::placeholder {
     grid-template-rows: 2em 4em 16em repeat(3, 2em);
 }
 .search-bar {
+    padding-bottom: 5px;
+    padding-left: 12px;
+    font-size: 20px;
+    font-weight: 200;
+    outline-color: white;
+    outline-width: 1.5px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 0.5px solid white;
     grid-row: 4;
     grid-column: 3 / 7;
 }
@@ -205,9 +255,19 @@ input:hover::placeholder {
     grid-column: 8;
 }
 .title {
+    padding-top: 100px;
     grid-row: 3;
     grid-column: 1 / 9;
     text-align: center;
+}
+
+.title h1 {
+    border-bottom: #0B95D4 5px solid;
+    display: inline-block;
+}
+
+.login {
+    width: 200px;
 }
 
 /*----------------------------------HomeComponent----------------------------------*/
