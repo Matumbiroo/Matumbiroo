@@ -9,8 +9,10 @@ class HomeContainer extends React.Component {
         const {accessToken, refreshToken} = this.props.match.params;
         this.props.setTokens({accessToken, refreshToken});
         this.props.getMyInfo();
+        this.props.getRecentFifty(accessToken);
     }
     render() {
+        // console.log('recent-fifty', this.props.recentImgUrl1);
         const {accessToken, refreshToken, user} = this.props;
         const {
             loading,
@@ -31,7 +33,12 @@ class HomeContainer extends React.Component {
             return <h2>Loading...</h2>;
         }
     return (
-        <HomeComponent accessToken={accessToken} refreshToken={refreshToken}/>
+        <HomeComponent
+            accessToken={accessToken}
+            refreshToken={refreshToken}
+            imageUrl1={this.props.recentImgUrl1}
+            imageUrl2={this.props.recentImgUrl2}
+        />
         )
     }
 }
