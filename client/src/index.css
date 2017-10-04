@@ -459,4 +459,10 @@ input:hover::placeholder {
     width: auto;
     margin-right: auto;
     overflow-y: scroll;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.no-margin-album {
+    height: 40vh;
+    margin: 0;
 }
