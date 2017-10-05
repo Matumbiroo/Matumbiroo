@@ -14,7 +14,7 @@ class GiphySearchComponent extends Component {
                 <h4>Here's our login page!</h4>
                 <a href="http://localhost:8080/login"><button className="login-btn">Login with Spotify</button></a>
             </div>
-            <input placeholder="Search a song to gif-ify it"className="search-bar" type="text"/>
+            <input placeholder="Search a song to gif-ify it" className="search-bar" type="text"/>
         </div>
         )
     }
