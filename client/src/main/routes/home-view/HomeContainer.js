@@ -13,7 +13,7 @@ class HomeContainer extends React.Component {
     }
     genAlbums =()=> {
         return this.props.recentlyPlayed.map((recent, id)=> {
-            return <div className="no-margin-album"><img className="album-art" key={recent.id} src={recent.track.album.images[1].url} alt=""/><br/></div>
+            return <div className="no-margin-album"><a className="album-link" href={recent.track.external_urls.spotify} target="_blank"><img className="album-art" key={recent.id} src={recent.track.album.images[1].url} alt=""/></a><br/></div>
         })
     };
     render() {
@@ -41,8 +41,6 @@ class HomeContainer extends React.Component {
         <HomeComponent
             accessToken={accessToken}
             refreshToken={refreshToken}
-            // imageUrl1={this.props.recentImgUrl1}
-            // imageUrl2={this.props.recentImgUrl2}
             genAlbums={this.genAlbums}
         />
         )
