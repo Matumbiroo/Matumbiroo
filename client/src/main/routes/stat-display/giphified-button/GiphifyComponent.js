@@ -8,9 +8,9 @@ class GiphifyComponent extends React.Component {
         let song = this.props.currentSong.name;
 
     return (
-        <div>
-            <div>Title: {song}</div>
-            <div>Artist: {artist} </div>
+        <div className="gifified-wrapper">
+            <div className="gifified">/ {song} /</div>
+            <div className="gifified">/ {artist} /</div>
             {this.props.genGifs()}
         </div>
         )
