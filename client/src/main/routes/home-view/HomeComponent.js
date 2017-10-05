@@ -6,11 +6,12 @@ class HomeComponent extends React.Component {
     render() {
         return (
         <div className="home-component-wrapper">
-            <Link to={`/recent-fifty/${this.props.accessToken}/${this.props.refreshToken}`} className="recent-fifty-box" >
+            <div className="recent-fifty-box" >
+                <Link className="recent-fifty-link" to={`/recent-fifty/${this.props.accessToken}/${this.props.refreshToken}`}><button className="recent-fifty-btn">Here</button></Link>
                 <div className="album-art">
                     {this.props.genAlbums()}
                 </div>
-            </Link>
+            </div>
             <Link to="/playlists" className="playlists-box" ></Link>
             <Link to="/songs" className="songs-box" ></Link>
             <Link to="/side-bar" className="side-bar-box" ></Link>
