@@ -251,6 +251,8 @@ input:hover::placeholder {
     border-bottom: 0.5px solid white;
     grid-row: 4;
     grid-column: 3 / 7;
+    width: 617px;
+    height: 28px;
 }
 .login-btn {
     grid-column: 8;
@@ -370,7 +372,7 @@ input:hover::placeholder {
 }
 
 .song-wrapper {
-    width: 750px;
+    width: 100%;
     border-radius: 2px;
     background-color: white;
     box-sizing: border-box;
@@ -389,7 +391,6 @@ input:hover::placeholder {
     color: black;
     background-color: #f5f5f5;
     width: 40%;
-    height: 20px;
     height: 100%;
     font-weight: 400;
     letter-spacing: none;
