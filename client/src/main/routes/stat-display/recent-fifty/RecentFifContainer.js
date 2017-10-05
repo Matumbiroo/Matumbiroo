@@ -77,14 +77,6 @@ class RecentFifContainer extends React.Component {
             return <img className="gifs" key={gif + index} src={gif.images.fixed_height.url} alt="" width="200px" height="200px" />
         })
     };
-    genGifInputs = () => {
-        return this.props.recentlyPlayed.map((song, index) => {
-            return {
-                artist: song.track.artists[0].name,
-                song: song.track.name
-            }
-        })
-    };
     genRecentFifty = () => {
 
         let danceability = this.genDanceability();
@@ -118,10 +110,11 @@ class RecentFifContainer extends React.Component {
     };
     genAlbums = () => {
         return this.props.recentlyPlayed.map((recent, id)=> {
-            return <div className="artwork-wrapper"><img key={recent.id} src={recent.track.album.images[1].url} alt=""/><br/></div>
+            return <div className="artwork-wrapper"><a href={recent.track.external_urls.spotify} target="_blank"><img key={recent.id} src={recent.track.album.images[1].url} alt=""/></a><br/></div>
         })
     };
     render() {
+        console.log(this.props.recentlyPlayed);
         return (
             <RecentFifComponent
                 genAlbums={this.genAlbums}
