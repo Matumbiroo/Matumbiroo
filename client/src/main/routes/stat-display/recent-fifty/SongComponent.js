@@ -13,22 +13,25 @@ class SongComponent extends React.Component {
                 Track: {this.props.song.track.name}<br/>
                 Artist: {this.props.song.track.artists[0].name}<br/>
                 Length: {this.props.duration[this.props.index]}
+                <div className="gif-btn-container">
+                    <Link to={`/song/${this.props.accessToken}/${this.props.refreshToken}/${this.props.id}`}><button className="gifify-btn">Gif-ify</button></Link>
+                </div>
             </div>
             <div className="container-fluid">
-            <div className="row stats">
-                <div className="col-md-4">
+            <div className="row stats-row-fifty">
+                <div className="col-md-4 stats-col">
                     Energy<br/>
                     <div className="energy-bar">
                         <div className="energy-bar-overlay" style={{width: (this.props.energy[this.props.index] * 100) + "%"}}></div>
                     </div>
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-4 stats-col">
                     Danceability<br/>
                     <div className="dance-bar">
                         <div className="dance-bar-overlay" style={{width: (this.props.danceability[this.props.index] * 100) + "%"}}></div>
                     </div>
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-4 stats-col">
                     Valence<br/>
                     <div className="valence-bar">
                         <div className="valence-bar-overlay" style={{width: (this.props.valence[this.props.index] * 100) + "%"}}></div>
@@ -36,16 +39,13 @@ class SongComponent extends React.Component {
                 </div>
             </div>
             </div>
-            <div className="container-fluid level-two">
+            <div className="container-fluid stats-row-fifty">
                 <div className="row">
-                    <div className="col-md-4">
+                    <div className="col-md-6 stats-col">
                         Key: {this.props.musicKey[this.props.index]}
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-6 stats-col">
                         Tempo: {this.props.tempo[this.props.index]}
-                    </div>
-                    <div className="col-md-4">
-                        <Link to={`/song/${this.props.accessToken}/${this.props.refreshToken}/${this.props.id}`}><button className="gifify-btn">Gif-ify</button></Link>
                     </div>
                 </div>
             </div>
