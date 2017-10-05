@@ -11,9 +11,9 @@ class HomeComponent extends React.Component {
                     {this.props.genAlbums()}
                 </div>
             </Link>
-            <Link to="/playlists" className="playlists-box" >Playlists</Link>
-            <Link to="/songs" className="songs-box" >Songs</Link>
-            <Link to="/side-bar" className="side-bar-box" >Side Bar</Link>
+            <Link to="/playlists" className="playlists-box" ></Link>
+            <Link to="/songs" className="songs-box" ></Link>
+            <Link to="/side-bar" className="side-bar-box" ></Link>
         </div>
         )
     }
