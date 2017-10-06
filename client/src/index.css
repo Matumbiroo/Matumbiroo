@@ -310,6 +310,21 @@ input:hover::placeholder {
     background-color: #eee;
     grid-template-columns: 1fr 600px 1fr;
 }
+.spotify-provided-by {
+    color: white;
+    width: 20em;
+    background-image: url(./Spotify_Logo_RGB_White.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 90% 90%;
+}
+
+.spotify-provided-by span {
+    font-weight: 500;
+    font-size: 15px;
+    position: absolute;
+    transform: translateX(175%) translateY(580%);
+}
 .recent-fifty-box:hover {
     text-decoration: none;
     background-color: #f0f0f0;
