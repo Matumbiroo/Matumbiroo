@@ -9,7 +9,7 @@ class GiphifyComponent extends React.Component {
 
     return (
         <div className="gifified-wrapper">
-            <div className="gifified">/ {song} /</div>
+            <div className="gifified">/ {song} /</div><span className="giphy">Powered by GIPHY</span>
             <div className="gifified">/ {artist} /</div>
             {this.props.genGifs()}
         </div>

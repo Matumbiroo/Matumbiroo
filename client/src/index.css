@@ -238,7 +238,7 @@ input:hover::placeholder {
 }
 .login-btn {
     text-align: left;
-    width: 25%;
+    width: 360px;
     height: 2.5em;
     margin: auto;
     margin-top: 20px;
@@ -313,6 +313,9 @@ input:hover::placeholder {
 .recent-fifty-box:hover {
     text-decoration: none;
     background-color: #f0f0f0;
+}
+.recent-fifty-link:hover {
+    text-decoration: none;
 }
 
 .playlists-box {
@@ -640,4 +643,39 @@ input:hover::placeholder {
     overflow-x: scroll;
     overflow-y: hidden;
     background-color: #eee;
+}
+
+.recent-text {
+    margin-left: 20px;
+}
+.recent-text:hover {
+    text-decoration: none;
+}
+.recent-btn {
+    text-align: left;
+    width: 360px;
+    height: 2.5em;
+    margin: auto;
+    margin-top: 140px;
+    margin-right: 180px;
+    border: none;
+    border-radius: 500px;
+    background-color: black;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 18px;
+    display: block;
+    background-image: url(./Spotify_Logo_RGB_White.png);
+    background-size: 25%;
+    background-repeat: no-repeat;
+    background-position: 75% 50%;
+}
+.recent-btn:hover {
+    transform: scale(1.075);
+}
+.giphy {
+    margin-top: -20px;
+    margin-left: 85%;
+    position: absolute;
 }
