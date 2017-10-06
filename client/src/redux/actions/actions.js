@@ -27,10 +27,9 @@ export function getMyInfo(accessToken) {
             // console.log(data.id);
             dispatch({ type: SPOTIFY_ME_SUCCESS, data: data });
             axios.get(`https://api.spotify.com/v1/users/${userId}/playlists`, {headers: {"Authorization": `Bearer ${accessToken}`}}).then((response)=> {
-                let userPlaylists = response.data;
-                console.log('USERPLAYLIST', userPlaylists);
+                let userPlaylists = response.data.items;
                 dispatch(setUserPlaylists(userPlaylists))
-            }) .catch(e => {
+            }).catch(e => {
                 console.error(e);
             })
 
@@ -46,7 +45,7 @@ export function getUserSongs(accessToken) {
             axios.get(`https://api.spotify.com/v1/me/tracks?limit=50&offset=${i}`, {headers: {"Authorization": `Bearer ${accessToken}`}}).then((response)=> {
                 let userSongs = response.data.items;
                 dispatch(setUserSongs(userSongs))
-            }) .catch(e => {
+            }).catch(e => {
                 console.error(e);
             })
         }
