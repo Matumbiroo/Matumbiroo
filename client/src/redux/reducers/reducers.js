@@ -23,6 +23,7 @@ const initialState = {
     },
     recentlyPlayed: [],
     audioFeatures: [],
+    userAudioFeatures: [],
     currentSong: {
         name: null,
         artists: [{name: ""}],
@@ -87,6 +88,11 @@ const mainReducer = function(state = initialState, action) {
                     }}]
                 }
             };
+        case "CLEAR_USER_SONGS":
+            return {
+                ...state,
+                userSongs: []
+            };
         case "SET_USER_PLAYLISTS":
             return {
                 ...state,
@@ -96,6 +102,11 @@ const mainReducer = function(state = initialState, action) {
             return {
                 ...state,
                 userSongs: [...state.userSongs, ...action.userSongs]
+            };
+        case "SET_AUDIO_FEATURES_USERS_SONGS":
+            return {
+                ...state,
+                userAudioFeatures: [...state.userAudioFeatures, ...action.audioFeatures]
             };
         default:
             return state;

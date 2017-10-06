@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import * as actionCreators from '../../../../redux/actions/actions';
+import SongComponent from './SongComponent';
 import PlaylistsComponent from "./PlaylistsComponent";
 
 class PlaylistsContainer extends React.Component {
@@ -68,12 +69,42 @@ class PlaylistsContainer extends React.Component {
             return <img className="gifs" key={gif + index} src={gif.images.fixed_height.url} alt="" width="200px" height="200px" />
         })
     };
+    genRecentFifty = () => {
 
-    // genAlbums = () => {
-    //     return this.props.recentlyPlayed.map((recent, id)=> {
-    //         return <div className="artwork-wrapper"><a href={recent.track.external_urls.spotify} target="_blank"><img key={recent.id} src={recent.track.album.images[1].url} alt=""/></a><br/></div>
-    //     })
-    // };
+        let danceability = this.genDanceability();
+        let valence = this.genValence();
+        let musicKey = this.genMusicKey();
+        let tempo = this.genTempo();
+        let energy = this.genEnergy();
+        let duration = this.genDuration();
+
+        return this.props.userPlaylists.map((song, index) => {
+            return <SongComponent
+
+                key={index + song.track.name}
+                danceability={danceability}
+                valence={valence}
+                musicKey={musicKey}
+                tempo={tempo}
+                energy={energy}
+                duration={duration}
+                song={song}
+                index={index}
+                accessToken={this.props.accessToken}
+                refreshToken={this.props.refreshToken}
+                id={song.track.id}
+                getCurrentSong={this.props.getCurrentSong}
+                getCurrentSongAudio={this.props.getCurrentSongAudio}
+                setTokens={this.props.setTokens}
+
+            />
+        })
+    };
+    genAlbums = () => {
+        return this.props.recentlyPlayed.map((recent, id)=> {
+            return <div className="artwork-wrapper"><a href={recent.track.external_urls.spotify} target="_blank"><img key={recent.id} src={recent.track.album.images[1].url} alt=""/></a><br/></div>
+        })
+    };
     render() {
         console.log('Playlists Props: ', this.props);
     return (

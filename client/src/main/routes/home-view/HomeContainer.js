@@ -28,7 +28,6 @@ class HomeContainer extends React.Component {
         })
     };
     render() {
-        console.log(this.props);
         const {accessToken, refreshToken, user} = this.props;
         const {
             loading,
