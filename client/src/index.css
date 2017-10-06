@@ -645,7 +645,7 @@ input:hover::placeholder {
 }
 
 .recent-fifty-link {
-    grid-column: 3;
+    grid-column: 2;
 }
 .recent-fifty-link {
     grid-column: 3;

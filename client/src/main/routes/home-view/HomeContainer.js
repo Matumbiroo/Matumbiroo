@@ -13,26 +13,26 @@ class HomeContainer extends React.Component {
     }
     genAlbums =()=> {
         return this.props.recentlyPlayed.map((recent, id)=> {
-            return <div className="no-margin-album"><a className="album-link" href={recent.track.external_urls.spotify} target="_blank"><img className="album-art" key={recent.id} src={recent.track.album.images[1].url} alt=""/></a><br/></div>
+            return <div key={id} className="no-margin-album"><a className="album-link" href={recent.track.external_urls.spotify} target="_blank"><img className="album-art" key={recent.id} src={recent.track.album.images[1].url} alt=""/></a><br/></div>
         })
     };
     render() {
-        console.log('recent-fifty', this.props.recentlyPlayed);
+        // console.log('recent-fifty', this.props.recentlyPlayed);
         const {accessToken, refreshToken, user} = this.props;
         const {
             loading,
-            display_name,
-            images,
-            id,
-            email,
-            external_urls,
-            href,
-            country,
-            product
+            // display_name,
+            // images,
+            // id,
+            // email,
+            // external_urls,
+            // href,
+            // country,
+            // product
         } = user;
-        const imageUrl = images[0]
-            ? images[0].url
-            : "";
+        // const imageUrl = images[0]
+        //     ? images[0].url
+        //     : "";
         // if we're still loading, indicate such
         if (loading) {
             return <h2>Loading...</h2>;

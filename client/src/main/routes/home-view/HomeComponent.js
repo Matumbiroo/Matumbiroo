@@ -12,8 +12,8 @@ class HomeComponent extends React.Component {
                     {this.props.genAlbums()}
                 </div>
             </div>
-            <Link to="/playlists" className="playlists-box" ></Link>
-            <Link to="/songs" className="songs-box" ></Link>
+            <Link to={`/playlists/${this.props.accessToken}/${this.props.refreshToken}`} className="playlists-box" ></Link>
+            <Link to={`/songs/${this.props.accessToken}/${this.props.refreshToken}`} className="songs-box" ></Link>
             <Link to="/side-bar" className="side-bar-box" ></Link>
         </div>
         )
