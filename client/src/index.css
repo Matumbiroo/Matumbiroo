@@ -239,21 +239,6 @@ input:hover::placeholder {
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: 2em 4em 16em repeat(3, 2em);
 }
-.search-bar {
-    padding-bottom: 5px;
-    padding-left: 12px;
-    font-size: 20px;
-    font-weight: 200;
-    outline-color: white;
-    outline-width: 1.5px;
-    background-color: transparent;
-    border: none;
-    border-bottom: 0.5px solid white;
-    grid-row: 4;
-    grid-column: 3 / 7;
-    width: 617px;
-    height: 28px;
-}
 .login-btn {
     grid-column: 8;
     width: 100%;
@@ -608,4 +593,13 @@ input:hover::placeholder {
 }
 .recent-fifty-link {
     grid-column: 3;
+}
+.overflow {
+    height: 300px;
+    width: 600px;
+    margin-left: 15em;
+    margin-top: 22em;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    background-color: #eee;
 }

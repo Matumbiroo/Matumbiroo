@@ -33,6 +33,13 @@ const initialState = {
         }}]
     },
     currentSongAudio: [],
+    searchedSong: {
+        gifs: [{images: {
+            fixed_height: {
+                webp: ""
+            }
+        }}]
+    }
 };
 
 const mainReducer = function(state = initialState, action) {
