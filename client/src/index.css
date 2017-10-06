@@ -237,14 +237,38 @@ input:hover::placeholder {
     grid-template-rows: 2em 4em 16em repeat(3, 2em);
 }
 .login-btn {
-    grid-column: 8;
-    width: 100%;
+    text-align: left;
+    width: 25%;
+    height: 2.5em;
+    margin: auto;
+    margin-top: 20px;
     border: none;
     border-radius: 500px;
     background-color: white;
     color: black;
     letter-spacing: 1px;
     font-weight: 500;
+    font-size: 18px;
+    display: block;
+    background-image: url(./Spotify_Logo_RGB_Black.png);
+    background-size: 25%;
+    background-repeat: no-repeat;
+    background-position: 75% 50%;
+}
+.login-btn:hover {
+    text-decoration: none;
+}
+.login-text {
+    margin-left: 69px;
+}
+.separate {
+    margin-left: 8px;
+}
+.login-text:hover {
+    text-decoration: none;
+}
+.no-link-underline:hover {
+    text-decoration: none;
 }
 
 .login-btn:hover {
