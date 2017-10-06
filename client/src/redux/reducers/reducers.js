@@ -33,9 +33,7 @@ const initialState = {
         }}]
     },
     currentSongAudio: [],
-    userPlaylists: {
-
-    },
+    userPlaylists: [],
     userSongs: []
 };
 
