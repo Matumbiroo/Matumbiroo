@@ -4,6 +4,10 @@ class RecentFifComponent extends React.Component {
     render() {
     return (
         <div className="recent-fifty-wrapper">
+            <div className="spotify-provided-by">
+                <span>Provided by</span>
+            </div>
+            {/* <img src="Spotify_Logo_RGB_White.png" alt="Spotify Logo"/> */}
             <div className="profile-averages">
                     <p>/ LAST 50 AVERAGES /</p>
                 <div className="container-fluid profile-averages-inner">
