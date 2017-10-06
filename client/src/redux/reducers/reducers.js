@@ -7,6 +7,18 @@ import {
 const initialState = {
     accessToken: null,
     refreshToken: null,
+    matumUser: {
+        isAuthenticated: false,
+        user: {
+            email:"",
+            username: ""
+        },
+        authError: {
+            signup: "",
+            login: "",
+            verify: ""
+        }
+    },
     user: {
         loading: false,
         country: null,
@@ -92,6 +104,27 @@ const mainReducer = function(state = initialState, action) {
                     }}]
                 }
             };
+        case "AUTHENTICATE":
+            return {
+                ...state.matumUser,
+                isAuthenticated: action.isValid,
+                user: action.user,
+                authError: {
+                    ...initialState.matumUser.authError
+                }
+            }
+        case "LOGOUT":
+            return {
+                ...initialState.matumUser
+            }
+        case "AUTH_ERROR":
+            return {
+                ...state.matumUser,
+                authError: {
+                    ...state.matumUser.authError,
+                    ...action.err
+                }
+            }
         default:
             return state;
     }
