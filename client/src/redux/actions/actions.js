@@ -24,7 +24,6 @@ export function getMyInfo(accessToken) {
         dispatch({ type: SPOTIFY_ME_BEGIN});
         spotifyApi.getMe().then(data => {
             const userId = data.id;
-            // console.log(data.id);
             dispatch({ type: SPOTIFY_ME_SUCCESS, data: data });
             axios.get(`https://api.spotify.com/v1/users/${userId}/playlists`, {headers: {"Authorization": `Bearer ${accessToken}`}}).then((response)=> {
                 let userPlaylists = response.data.items;
@@ -41,10 +40,21 @@ export function getMyInfo(accessToken) {
 
 export function getUserSongs(accessToken) {
     return dispatch => {
+        dispatch(clearUserSongs());
         for(let i = 0; i < 200; i+=50){
             axios.get(`https://api.spotify.com/v1/me/tracks?limit=50&offset=${i}`, {headers: {"Authorization": `Bearer ${accessToken}`}}).then((response)=> {
                 let userSongs = response.data.items;
-                dispatch(setUserSongs(userSongs))
+                let reducedIds = userSongs.map((song, index)=> {
+                    return song.track.id;
+                });
+                reducedIds = reducedIds.join(',');
+                dispatch(setUserSongs(userSongs));
+                axios.get(`https://api.spotify.com/v1/audio-features?ids=${reducedIds}`,{headers: {"Authorization": `Bearer ${accessToken}`}}).then((response)=> {
+                    let audioFeatures = response.data.audio_features;
+                    dispatch(setAudioFeaturesUsersSongs(audioFeatures))
+                }).catch(e => {
+                    console.error(e);
+                })
             }).catch(e => {
                 console.error(e);
             })
@@ -52,6 +62,7 @@ export function getUserSongs(accessToken) {
 
     }
 }
+
 
 export function getRecentFifty(accessToken) {
     return dispatch => {
@@ -72,7 +83,6 @@ export function getCurrentSong(accessToken, id) {
             let currentSong = response.data;
             let artist = currentSong.artists[0].name;
             let song = currentSong.name;
-            console.log('response.data', response.data);
             axios.get(`http://api.giphy.com/v1/gifs/search?q=${artist}&api_key=pvXAxC0LmMyuslSuN1KEXVbHskcFITbw&limit=10`,
                 {headers: {"Accept": "image/*"}}
             )
@@ -120,7 +130,6 @@ export function getAudioFeatures(accessToken) {
                 });
             reducedIds = reducedIds.join(',');
             axios.get(`https://api.spotify.com/v1/audio-features?ids=${reducedIds}`,{headers: {"Authorization": `Bearer ${accessToken}`}}).then((response)=> {
-
                 let audioFeatures = response.data.audio_features;
                 dispatch(setAudioFeatures(audioFeatures))
             })
@@ -130,6 +139,14 @@ export function getAudioFeatures(accessToken) {
         }).catch((error)=> {
             console.error(error);
         })
+    }
+}
+
+
+export function setAudioFeaturesUsersSongs(audioFeatures) {
+    return {
+        type: "SET_AUDIO_FEATURES_USERS_SONGS",
+        audioFeatures,
     }
 }
 
@@ -181,6 +198,11 @@ export function setRecentlyPlayed(recent, imageUrl1, imageUrl2) {
 function clearGifs() {
     return {
         type: "CLEAR_GIFS",
+    }
+}
+function clearUserSongs() {
+    return {
+        type: "CLEAR_USER_SONGS",
     }
 }
 

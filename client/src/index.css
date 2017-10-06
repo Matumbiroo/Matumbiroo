@@ -719,6 +719,18 @@ input:hover::placeholder {
     background-repeat: no-repeat;
     background-position: 75% 50%;
 }
+.songs-btn:hover {
+    transform: scale(1.075);
+}
+.songs-link:hover {
+    text-decoration: none;
+}
+.playlists-btn:hover {
+    transform: scale(1.075);
+}
+.playlists-link:hover {
+    text-decoration: none;
+}
 .recent-btn:hover {
     transform: scale(1.075);
 }
@@ -740,7 +752,7 @@ input:hover::placeholder {
     margin-left: 27%;
 }
 .playlist-album-art:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
     box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
 .song-album-art {
@@ -750,7 +762,7 @@ input:hover::placeholder {
     margin-left: 27%;
 }
 .song-album-art:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
     box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
 .playlist-song-album {
