@@ -19,15 +19,38 @@ export function setTokens({accessToken, refreshToken}) {
     return { type: SPOTIFY_TOKENS, accessToken, refreshToken };
 }
 
-export function getMyInfo() {
+export function getMyInfo(accessToken) {
     return dispatch => {
         dispatch({ type: SPOTIFY_ME_BEGIN});
         spotifyApi.getMe().then(data => {
+            const userId = data.id;
+            // console.log(data.id);
             dispatch({ type: SPOTIFY_ME_SUCCESS, data: data });
+            axios.get(`https://api.spotify.com/v1/users/${userId}/playlists`, {headers: {"Authorization": `Bearer ${accessToken}`}}).then((response)=> {
+                let userPlaylists = response.data.items;
+                dispatch(setUserPlaylists(userPlaylists))
+            }).catch(e => {
+                console.error(e);
+            })
+
         }).catch(e => {
             dispatch({ type: SPOTIFY_ME_FAILURE, error: e });
         });
     };
+}
+
+export function getUserSongs(accessToken) {
+    return dispatch => {
+        for(let i = 0; i < 200; i+=50){
+            axios.get(`https://api.spotify.com/v1/me/tracks?limit=50&offset=${i}`, {headers: {"Authorization": `Bearer ${accessToken}`}}).then((response)=> {
+                let userSongs = response.data.items;
+                dispatch(setUserSongs(userSongs))
+            }).catch(e => {
+                console.error(e);
+            })
+        }
+
+    }
 }
 
 export function getRecentFifty(accessToken) {
@@ -110,6 +133,19 @@ export function getAudioFeatures(accessToken) {
     }
 }
 
+export function setUserSongs(userSongs) {
+    return {
+        type: "SET_USER_SONGS",
+        userSongs
+    }
+}
+
+export function setUserPlaylists(userPlaylists) {
+    return {
+        type: "SET_USER_PLAYLISTS",
+        userPlaylists
+    }
+}
 
 export function setCurrentSongAudio(currentSongAudio) {
     return {

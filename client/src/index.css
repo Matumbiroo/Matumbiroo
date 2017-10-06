@@ -338,6 +338,7 @@ input:hover::placeholder {
     grid-row: 2;
     height: 100%;
     background-color: #eee;
+    padding: 20px;
 
 }
 .playlists-box:hover {
@@ -624,7 +625,7 @@ input:hover::placeholder {
 .album-art {
     display: inline;
     height: 40vh;
-    width: auto;
+    width: 40vh;
     margin-right: auto;
     overflow-y: scroll;
     margin-top: 0;
@@ -645,10 +646,7 @@ input:hover::placeholder {
 }
 
 .recent-fifty-link {
-    grid-column: 3;
-}
-.recent-fifty-link {
-    grid-column: 3;
+    grid-column: 2;
 }
 .overflow {
     height: 300px;
@@ -670,9 +668,44 @@ input:hover::placeholder {
     text-align: left;
     width: 360px;
     height: 2.5em;
-    margin: auto;
     margin-top: 140px;
-    margin-right: 180px;
+    margin-left: 180px;
+    border: none;
+    border-radius: 500px;
+    background-color: black;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 18px;
+    display: block;
+    background-image: url(./Spotify_Logo_RGB_White.png);
+    background-size: 25%;
+    background-repeat: no-repeat;
+    background-position: 75% 50%;
+}
+.playlists-btn {
+    text-align: left;
+    width: 360px;
+    height: 2.5em;
+    margin: auto;
+    border: none;
+    border-radius: 500px;
+    background-color: black;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 18px;
+    display: block;
+    background-image: url(./Spotify_Logo_RGB_White.png);
+    background-size: 25%;
+    background-repeat: no-repeat;
+    background-position: 75% 50%;
+}
+.songs-btn {
+    text-align: left;
+    width: 360px;
+    height: 2.5em;
+    margin: auto;
     border: none;
     border-radius: 500px;
     background-color: black;
@@ -693,4 +726,35 @@ input:hover::placeholder {
     margin-top: -20px;
     margin-left: 85%;
     position: absolute;
+}
+.separate-playlist {
+    margin-left: 14px;
+}
+.separate-songs {
+    margin-left: 16px;
+}
+.playlist-album-art {
+    height: 220px;
+    width: 220px;
+    margin-top: 20px;
+    margin-left: 27%;
+}
+.playlist-album-art:hover {
+    transform: scale(1.05);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+.song-album-art {
+    height: 220px;
+    width: 220px;
+    margin-top: 20px;
+    margin-left: 27%;
+}
+.song-album-art:hover {
+    transform: scale(1.05);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+.playlist-song-album {
+    margin-top: 10px;
+    height: 220px;
+    overflow-y: scroll;
 }
