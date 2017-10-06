@@ -273,7 +273,7 @@ input:hover::placeholder {
 
 .login-btn:hover {
     /* background-color: #0B95D4; */
-    background-color: #FFFF4F;
+    transform: scale(1.075);
 }
 
 .title {
