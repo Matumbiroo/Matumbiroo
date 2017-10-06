@@ -323,7 +323,7 @@ input:hover::placeholder {
     font-weight: 500;
     font-size: 15px;
     position: absolute;
-    transform: translateX(175%) translateY(580%);
+    transform: translateX(115%) translateY(580%);
 }
 .recent-fifty-box:hover {
     text-decoration: none;

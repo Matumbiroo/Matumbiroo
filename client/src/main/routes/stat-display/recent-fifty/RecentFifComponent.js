@@ -5,7 +5,7 @@ class RecentFifComponent extends React.Component {
     return (
         <div className="recent-fifty-wrapper">
             <div className="spotify-provided-by">
-                <span>Provided by</span>
+                <span>Data Provided by</span>
             </div>
             {/* <img src="Spotify_Logo_RGB_White.png" alt="Spotify Logo"/> */}
             <div className="profile-averages">

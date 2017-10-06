@@ -186,54 +186,150 @@ function clearGifs() {
 
 //-------------------------------------------------------------------------------------------------------
 
-export function loadData(){
-    return (dispatch) => {
-        axios.get(url).then((response) => {
-            let users = response.data.data;
-            dispatch(setData(users))
-        })
-        .catch((err) => {
-            console.error(err);
-        })
-    }
-}
+//MATUMBIROO AUTHORIZATION
 
-export function setData(users){
+const axiosUser = axios.create();
+
+axiosUser.interceptors.request.use((config) => {
+    let token = localStorage.getItem("token");
+    config.headers.Authorization = `Bearer ${token}`;
+    return config
+}, (err) => {
+    return Promise.reject(err);
+})
+
+const authUrl = "http://localhost:8000/auth/";
+const profileUrl = "http://localhost:8000/profile/";
+
+export function authenticate(isValid, user){
     return {
-        type: "SET_DATA",
-        users
+        type: "AUTHENTICATE",
+        isValid,
+        user
     }
 }
 
-export function deleteData(id){
-    return (dispatch) => {
-        axios.delete(url + id).then((response) => {
-            dispatch(loadData())
-        })
-        .catch((err) => {
-            console.error(err);
-        }) 
+export function authError(err){
+    return {
+        type: "AUTH_ERROR",
+        err
     }
 }
 
-export function editData(editedUser, id) {
+export function verifyToken(){
     return (dispatch) => {
-        axios.put(url + id, editedUser).then((response) => {
-            dispatch(loadData())
-        })
-        .catch((err) => {
-            console.error(err);
-        })
+        axiosUser.get(profileUrl + "verify")
+            .then((response) => {
+                let user = response.data.user;
+                let isValid = response.data.success;
+                dispatch(authenticate(isValid, user));
+            })
+            .catch((err) => {
+                console.error(err);
+                dispatch(authError({verify: "Invalid token"}));
+            })
     }
 }
 
-export function postData(user, editedUser){
+export function signup(credentials) {
     return (dispatch) => {
-        axios.post(url, editedUser).then((response) => {
-            dispatch(loadData())
-        })
-        .catch((err) => {
-            console.error(err);
-        })
+        axiosUser.post(authUrl + "signup", credentials)
+            .then((response) => {
+                console.log(response.data);
+                let token = response.data.token
+                localStorage.setItem("token", token);
+                //takes user info and authorization status and dispatches it
+                let user = response.data.user,
+                    isValid = response.data.success;
+                dispatch(authenticate(isValid, user));
+            })
+            .catch((err) => {
+                console.error(err);
+                dispatch(authError({signup: "Invalid username or password."}))
+            })
     }
 }
+
+export function login(credentials) {
+    return (dispatch) => {
+        axiosUser.post(authUrl + "login", credentials)
+            .then((response) => {
+                console.log(response.data);
+                //set token in storage
+                //define user and valid
+                //dispatch authenticate as valid user
+                let token = response.data.token
+                localStorage.setItem("token", token);
+                //takes user info and authorization status and dispatches it
+                let user = response.data.user,
+                    isValid = response.data.success;
+                dispatch(authenticate(isValid, user));
+            })
+            .catch((err) => {
+                console.error(err);
+                dispatch(authError({login: "Invalid username or password."}))
+            })
+    }
+}
+
+export function logout(){
+    return (dispatch) => {
+        localStorage.removeItem("token");
+        dispatch({type: "LOGOUT"});
+    }
+}
+
+//DATA
+const dataUrl = "http://localhost:8080/dolphin";
+
+// export function loadData(){
+//     return (dispatch) => {
+//         axios.get(url).then((response) => {
+//             let users = response.data.data;
+//             dispatch(setData(users))
+//         })
+//         .catch((err) => {
+//             console.error(err);
+//         })
+//     }
+// }
+
+// export function setData(users){
+//     return {
+//         type: "SET_DATA",
+//         users
+//     }
+// }
+
+// export function deleteData(id){
+//     return (dispatch) => {
+//         axios.delete(url + id).then((response) => {
+//             dispatch(loadData())
+//         })
+//         .catch((err) => {
+//             console.error(err);
+//         }) 
+//     }
+// }
+
+// export function editData(editedUser, id) {
+//     return (dispatch) => {
+//         axios.put(url + id, editedUser).then((response) => {
+//             dispatch(loadData())
+//         })
+//         .catch((err) => {
+//             console.error(err);
+//         })
+//     }
+// }
+
+// export function postData(user, editedUser){
+//     return (dispatch) => {
+//         axios.post(url, editedUser).then((response) => {
+//             dispatch(loadData())
+//         })
+//         .catch((err) => {
+//             console.error(err);
+//         })
+//     }
+// }

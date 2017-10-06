@@ -1,6 +1,6 @@
 'use strict';
 
-/** Module dependencies. */
+/* Module dependencies. */
 const express      = require('express');
 const bodyParser   = require('body-parser');
 const cookieParser = require('cookie-parser');
