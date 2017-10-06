@@ -33,13 +33,10 @@ const initialState = {
         }}]
     },
     currentSongAudio: [],
-    searchedSong: {
-        gifs: [{images: {
-            fixed_height: {
-                webp: ""
-            }
-        }}]
-    }
+    userPlaylists: {
+
+    },
+    userSongs: []
 };
 
 const mainReducer = function(state = initialState, action) {
@@ -91,6 +88,16 @@ const mainReducer = function(state = initialState, action) {
                         }
                     }}]
                 }
+            };
+        case "SET_USER_PLAYLISTS":
+            return {
+                ...state,
+                userPlaylists: action.userPlaylists
+            };
+        case "SET_USER_SONGS":
+            return {
+                ...state,
+                userSongs: [...state.userSongs, ...action.userSongs]
             };
         default:
             return state;
