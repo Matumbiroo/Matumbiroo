@@ -7,9 +7,15 @@ class SongComponent extends React.Component {
         <div className="song-wrapper">
             <span className="last-fifty-song-num">/ {this.props.index + 1} /</span><br/>
             <div className="fifty-track-artist">
-                Track: {this.props.song.track.name}<br/>
-                Artist: {this.props.song.track.artists[0].name}<br/>
-                Length: {this.props.duration[this.props.index]}
+                <div className="track-recent-fif">
+                    Track: {this.props.song.track.name}<br/>
+                </div>
+                <div className="artist-recent-fif">
+                    Artist: {this.props.song.track.artists[0].name}<br/>
+                </div>
+                <div className="length-recent-fif">
+                    Length: {this.props.duration[this.props.index]}
+                </div>
                 <div className="gif-btn-container">
                     <Link to={`/song/${this.props.accessToken}/${this.props.refreshToken}/${this.props.id}`}><button className="gifify-btn">Gif-ify</button></Link>
                 </div>
@@ -38,10 +44,13 @@ class SongComponent extends React.Component {
             </div>
             <div className="container-fluid stats-row-fifty">
                 <div className="row">
-                    <div className="col-md-6 stats-col">
+                    <div className="col-md-4 stats-col">
                         Key: {this.props.musicKey[this.props.index]}
                     </div>
-                    <div className="col-md-6 stats-col">
+                    <div className="col-md-4 stats-col">
+                        Mode: {this.props.mode[this.props.index]}
+                    </div>
+                    <div className="col-md-4 stats-col">
                         Tempo: {this.props.tempo[this.props.index]}
                     </div>
                 </div>

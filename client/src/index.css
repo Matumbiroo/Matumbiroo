@@ -474,17 +474,6 @@ input:hover::placeholder {
     margin: 10px;
 }
 
-.song-wrapper {
-    width: 100%;
-    border-radius: 2px;
-    background-color: white;
-    box-sizing: border-box;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-    margin-bottom: 1.5em;
-    letter-spacing: 1.5px;
-    font-weight: 300;
-}
-
 .gifify-btn {
     line-height: 9px;
     height: 3em;
@@ -506,7 +495,7 @@ input:hover::placeholder {
 
 .gif-btn-container {
     position: absolute;
-    transform: translateX(1505%) translateY(-200%);
+    transform: translateX(1505%) translateY(-125%);
     /* transform: translateY(-50%); */
 }
 
@@ -618,6 +607,35 @@ input:hover::placeholder {
     /* margin-top: 0.5em; */
     /* margin-bottom: 0.1em; */
     text-align: center;
+}
+
+.length-recent-fif {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.artist-recent-fif {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.track-recent-fif {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.song-wrapper {
+    width: 100%;
+    border-radius: 2px;
+    background-color: white;
+    box-sizing: border-box;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    margin-bottom: 1.5em;
+    letter-spacing: 1.5px;
+    font-weight: 300;
 }
 
 /*----------------------------------Album Art----------------------------------*/
