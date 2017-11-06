@@ -24,7 +24,7 @@ class HomeContainer extends React.Component {
     };
     genPlaylistImg = () => {
         return this.props.userPlaylists.map((playlist, id) => {
-            return <div key={id} className="pps"><a className="playlist-album-link" href={playlist.external_urls.spotify} target="_blank"><img className="playlist-album-art" key={playlist.id} src={playlist.images[0].url} alt=""/></a><br/></div>
+            // return <div key={id} className="pps"><a className="playlist-album-link" href={playlist.external_urls.spotify} target="_blank"><img className="playlist-album-art" key={playlist.id} src={playlist.images[0].url} alt=""/></a><br/></div>
         })
     };
     render() {
